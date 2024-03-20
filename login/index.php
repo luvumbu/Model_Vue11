@@ -40,6 +40,8 @@ else {
   .cursor_pointer:hover{
     cursor: pointer;
   }
+
+ 
  </style>
 </body>
 </html>

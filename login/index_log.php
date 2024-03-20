@@ -26,11 +26,18 @@ if($information_user_login==$username && $information_user_password==sha1($passw
     
 
     
-<div class="container mt-3">
+<div class="container mt-3 text-center">
   <h2>Button Styles</h2>
  
-  <button type="button" class="btn btn-primary">1</button>
-  <button type="button" class="btn btn-secondary" onclick="all_element()">all_element</button>
+  <div  class="" onclick="home()" >
+  <img width="50" height="50" src="https://img.icons8.com/ios/50/home--v1.png" alt="home--v1"/>
+  <p>all_element</p>
+</div>
+
+  <div  onclick="all_element()">
+  <img width="50" height="50" src="https://img.icons8.com/color/50/all.png" alt="all"/>
+  <p>all_element</p>
+  </div>
      
 </div>
   
@@ -65,7 +72,7 @@ if($information_user_login==$username && $information_user_password==sha1($passw
 
 <style>
   input{
-    border:1px solid rgba(0,0,0,0);
+    border:1px solid rgba(0,0,0,0.3);
   }
   .flex_box_1{
     display: flex;
@@ -121,8 +128,16 @@ if($information_user_login==$username && $information_user_password==sha1($passw
       background-color:black ; 
       border:1px solid #89832c;
   }
-</style>
+ 
+ 
+  .cursor_pointer {
+    margin: 15px;
+  }
 
+  .margin_top {
+    margin-top: 100px;
+  }
+</style>
 
 <script>
   function add_admin(_this) {
@@ -187,6 +202,25 @@ function liste_projet_admin_add() {
 }
   }
 
+
+  function liste_projet_admin_add2(_this){
+   
+   const ok = new Information("class/php/cookie/liste_projet_admin_add2.php"); // création de la classe 
+ ok.add("liste_projet_admin_id_parent", _this.title); // ajout d'une deuxieme information denvoi  
+
+ console.log(ok.info()); // demande l'information dans le tableau
+ ok.push(); // envoie l'information au code pkp 
+
+ const myTimeout = setTimeout(liste_projet_admin_add2, 250);
+
+function liste_projet_admin_add2() {
+  Ajax("admin_section_1","all_table.php");
+}
+ }
+
+
+
+  
  
 
 
@@ -230,7 +264,9 @@ function liste_projet_admin_remove() {
   }
 
 
-  
+  function home() {
+    location.reload() ; 
+  }
 
   Ajax("admin_section_1","class/php/admin_section_1.php");
 </script>

@@ -1,6 +1,4 @@
 <?php
-
-
 include("../model/class/php/connexion.php") ;    
 include("../model/class/php/Select_datas.php") ;    
 include("../model/class/php/Insertion_Bdd.php") ;  
@@ -14,15 +12,12 @@ array_push(
   'liste_projet_admin_name2'
 );
 
-$apple->sql='SELECT * FROM `liste_projet_admin` WHERE 1 ';
+$apple->sql='SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1_general`!="remove"';
 $apple->execution();
 $myJSON = json_encode($apple->list_row);   
-
 $number = 0 ; 
-
 // affectation valeur array 
-// execution et ajout des element dans la nouvelle table 
-  
+// execution et ajout des element dans la nouvelle table   
 $liste_projet_admin_id_sha1=$apple->add_array_element($number);
 $number ++ ; 
 $liste_projet_admin_id=$apple->add_array_element($number);
@@ -31,7 +26,6 @@ $liste_projet_admin_name1=$apple->add_array_element($number);
 $number ++ ; 
 $liste_projet_admin_name2=$apple->add_array_element($number);
 $number ++ ; 
-
 // Itération sur les éléments de $liste_projet_admin_id_sha1
 for($o=0; $o < count($liste_projet_admin_id_sha1); $o++){
     echo $liste_projet_admin_id_sha1[$o];

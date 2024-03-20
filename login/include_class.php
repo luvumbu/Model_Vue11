@@ -8,69 +8,25 @@ if (!file_exists($filename)) {
 }
  
 
-include("../model/class/php/Select_file.php") ;   
+include("../model/class/php/Select_file.php") ; 
+include("../model/class/php/Get_anne.php") ; 
+include("../model/class/php/Insertion_Bdd.php") ; 
+include("../model/class/php/remove_db.php") ; 
+include("../model/class/php/Select_datas.php") ; 
+  
 include($filename);
-$files_include_php = new Select_file("../model/class/php/",".php");
+
 $files_include_js = new Select_file("../model/class/js/",".js"); 
 //$files_include_php->set_array_name('destroy');
-$files_include_php->set_array_name('Get_anne');
-$files_include_php->set_array_name('Insertion_Bdd');
-$files_include_php->set_array_name('remove_db');
-$files_include_php->set_array_name('Select_datas'); 
+
 //$files_include_php->set_array_name('Show_table'); 
-$files_include_php->exe() ; 
+//$files_include_php->exe() ; 
 $files_include_js->set_array_name('Ajax');
 $files_include_js->set_array_name('Atribute');
 $files_include_js->set_array_name('Information');
 echo '<script>';
 $files_include_js->exe() ;
 echo '</script>'; 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-class Show_table {
-    public $src_name;
- 
-  
-    function __construct() {
-   
-    }
-  
-    function exe() {
-      
-    } 
-   
-  
-  }
-
-
-
 
 
  
@@ -96,12 +52,7 @@ if ($resultat->num_rows==0) {
     unlink($filename);
     header('Location:../');
     exit();  
-}  
-
-
- 
+}   
 // Fermeture de la connexion
 $connexion->close();
- 
-
 ?>

@@ -141,6 +141,8 @@ $execution_formulaire_php->set_action("CREATE TABLE liste_projet (
   liste_projet_id_sha1_general VARCHAR(200) NOT NULL,
   liste_projet_ip VARCHAR(200) NOT NULL,
   liste_projet_img VARCHAR(200) NOT NULL,
+
+  liste_projet_name0 VARCHAR(200) NOT NULL, 
   liste_projet_name1 VARCHAR(200) NOT NULL, 
   liste_projet_name2 VARCHAR(200) NOT NULL, 
   liste_projet_name3 VARCHAR(200) NOT NULL, 
@@ -163,6 +165,94 @@ $execution_formulaire_php->set_action("CREATE TABLE liste_projet (
   liste_projet_visibilite2 TEXT(200) NOT NULL, 
   liste_projet_visibilite3 TEXT(200) NOT NULL, 
   liste_projet_visibilite4 TEXT(200) NOT NULL, 
+
+  liste_projet_margin_0 TEXT(200) NOT NULL, 
+  liste_projet_margin_1 TEXT(200) NOT NULL, 
+  liste_projet_margin_2 TEXT(200) NOT NULL, 
+  liste_projet_margin_3 TEXT(200) NOT NULL, 
+  liste_projet_margin_4 TEXT(200) NOT NULL, 
+
+  liste_projet_padding_0 TEXT(200) NOT NULL, 
+  liste_projet_padding_1 TEXT(200) NOT NULL, 
+  liste_projet_padding_2 TEXT(200) NOT NULL, 
+  liste_projet_padding_3 TEXT(200) NOT NULL, 
+  liste_projet_padding_4 TEXT(200) NOT NULL, 
+
+  liste_projet_color_1 TEXT(200) NOT NULL, 
+  liste_projet_color_2 TEXT(200) NOT NULL, 
+  liste_projet_color_3 TEXT(200) NOT NULL, 
+  liste_projet_color_4 TEXT(200) NOT NULL, 
+
+
+  liste_projet_background_1 TEXT(200) NOT NULL, 
+  liste_projet_background_2 TEXT(200) NOT NULL, 
+  liste_projet_background_3 TEXT(200) NOT NULL, 
+  liste_projet_background_4 TEXT(200) NOT NULL, 
+
+
+  liste_projet_font_family_1 TEXT(200) NOT NULL, 
+  liste_projet_font_family_2 TEXT(200) NOT NULL, 
+  liste_projet_font_family_3 TEXT(200) NOT NULL, 
+  liste_projet_font_family_4 TEXT(200) NOT NULL, 
+
+
+  liste_projet_font_weight_1 TEXT(200) NOT NULL, 
+  liste_projet_font_weight_2 TEXT(200) NOT NULL, 
+  liste_projet_font_weight_3 TEXT(200) NOT NULL, 
+  liste_projet_font_weight_4 TEXT(200) NOT NULL, 
+
+  liste_projet_text_decoration_1 TEXT(200) NOT NULL, 
+  liste_projet_text_decoration_2 TEXT(200) NOT NULL, 
+  liste_projet_text_decoration_3 TEXT(200) NOT NULL, 
+  liste_projet_text_decoration_4 TEXT(200) NOT NULL, 
+
+  liste_projet_width_1 TEXT(200) NOT NULL, 
+  liste_projet_width_2 TEXT(200) NOT NULL, 
+  liste_projet_width_3 TEXT(200) NOT NULL, 
+  liste_projet_width_4 TEXT(200) NOT NULL, 
+
+  liste_projet_height_1 TEXT(200) NOT NULL, 
+  liste_projet_height_2 TEXT(200) NOT NULL, 
+  liste_projet_height_3 TEXT(200) NOT NULL, 
+  liste_projet_height_4 TEXT(200) NOT NULL, 
+
+
+  liste_projet_display_1 TEXT(200) NOT NULL, 
+  liste_projet_display_2 TEXT(200) NOT NULL, 
+  liste_projet_display_3 TEXT(200) NOT NULL, 
+  liste_projet_display_4 TEXT(200) NOT NULL,
+
+  liste_projet_float_1 TEXT(200) NOT NULL, 
+  liste_projet_float_2 TEXT(200) NOT NULL, 
+  liste_projet_float_3 TEXT(200) NOT NULL, 
+  liste_projet_float_4 TEXT(200) NOT NULL, 
+
+
+  liste_projet_position_1 TEXT(200) NOT NULL, 
+  liste_projet_position_2 TEXT(200) NOT NULL, 
+  liste_projet_position_3 TEXT(200) NOT NULL, 
+  liste_projet_position_4 TEXT(200) NOT NULL, 
+
+  liste_projet_z_index_1 TEXT(200) NOT NULL, 
+  liste_projet_z_index_2 TEXT(200) NOT NULL, 
+  liste_projet_z_index_3 TEXT(200) NOT NULL, 
+  liste_projet_z_index_4 TEXT(200) NOT NULL, 
+
+
+  liste_projet_opacity_1 TEXT(200) NOT NULL, 
+  liste_projet_opacity_2 TEXT(200) NOT NULL, 
+  liste_projet_opacity_3 TEXT(200) NOT NULL, 
+  liste_projet_opacity_4 TEXT(200) NOT NULL, 
+
+  liste_projet_text_transform_1 TEXT(200) NOT NULL, 
+  liste_projet_text_transform_2 TEXT(200) NOT NULL, 
+  liste_projet_text_transform_3 TEXT(200) NOT NULL, 
+  liste_projet_text_transform_4 TEXT(200) NOT NULL, 
+
+ 
+
+
+
 
   liste_projet_visite_page TEXT(200) NOT NULL,
   liste_projet_type VARCHAR(200) NOT NULL,   
