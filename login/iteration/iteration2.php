@@ -60,9 +60,12 @@ if(count($liste_projet_admin_name1_iteration2)!=0){
     <?php    echo $liste_projet_admin_name2_iteration2[$o_iteration3] ; ?>
   </p> 
 </div>
+<div class="container-fluid p-5">
   
- 
-
+ <p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, sapiente. Minima, est culpa. Assumenda cupiditate, odit, ratione molestiae suscipit fuga recusandae doloribus eos in labore rerum ullam? Dolorem, ipsum fugiat.
+ </p>
+  </div>
 <?php 
  
 

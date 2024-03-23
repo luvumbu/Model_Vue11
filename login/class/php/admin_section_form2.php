@@ -8,10 +8,14 @@ for($o =0; $o<count($liste_projet_admin_id); $o++){
         </div>
     
      <div class="add_visibility">
-     <img onclick="liste_projet_admin_add2(this)" width="50" title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" height="50" src="https://img.icons8.com/officel/50/add--v1.png" alt="add--v1" class="cursor_pointer"/> 
 
+ 
+     <img onclick="liste_projet_admin_add2(this)" width="50" title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" height="50" src="https://img.icons8.com/officel/50/add--v1.png" alt="add--v1" class="cursor_pointer"/> 
+ 
      </div>
        <img onclick="liste_projet_admin_show(this)" width="50" title="<?php echo $liste_projet_admin_id_sha1[$o] ?>"  width="50" class="cursor_pointer" height="50" src="https://img.icons8.com/android/50/visible.png" alt="visible"/>
+   
+   
        <img width="50" class="cursor_pointer" height="50" src="https://img.icons8.com/office/50/picture.png" alt="picture"/>
         <img  onclick="liste_projet_admin_remove(this)" width="50" title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" width="50" class="cursor_pointer" height="50" src="https://img.icons8.com/ios/50/delete-forever--v1.png" alt="delete-forever--v1"/>
        
@@ -20,3 +24,4 @@ for($o =0; $o<count($liste_projet_admin_id); $o++){
     
     }
     ?>
+

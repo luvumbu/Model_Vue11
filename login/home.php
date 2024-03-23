@@ -15,7 +15,8 @@ array_push(
   'liste_projet_admin_id_sha1',
   'liste_projet_admin_id',
   'liste_projet_admin_name1',
-  'liste_projet_admin_name2'
+  'liste_projet_admin_name2',
+  'liste_projet_admin_id_parent'
 );
 
 $apple->sql = 'SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1_general`!="remove" AND `liste_projet_admin_id_sha1` ="' . give_url() . '" ';
@@ -33,6 +34,12 @@ $number++;
 $liste_projet_admin_name2 = $apple->add_array_element($number);
 $number++;
 
+$liste_projet_admin_id_parent_ = $apple->add_array_element($number);
+$number++;
+
+
+
+$src_parent = $liste_projet_admin_id_parent_[0] ; 
 ?>
 
 
@@ -67,102 +74,107 @@ if (count($apple->list_row) == 0) {
     <?php
 
 }
-$liste_projet_admin_id_sha1_iteration1 = $liste_projet_admin_id_sha1;
-
-
-
-// Itération sur les éléments de $liste_projet_admin_id_sha1
-for ($o = 0; $o < count($liste_projet_admin_id_sha1_iteration1); $o++) {
-
-  $liste_projet_admin_id_parent_iteration1 = $liste_projet_admin_id_sha1_iteration1[$o];
-
-  // Nouvel objet $apple à chaque itération
-  $apple_iteration1 = new Select_datas($servername, $username, $password, $dbname);
-
-  array_push(
-    $apple_iteration1->row,
-    'liste_projet_admin_id_sha1',
-    'liste_projet_admin_id',
-    'liste_projet_admin_name1',
-    'liste_projet_admin_name2'
-  );
-
-  $apple_iteration1->sql = 'SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_parent`="' . $liste_projet_admin_id_parent_iteration1 . '"  AND `liste_projet_admin_id_sha1_general` !="remove"';
-  $apple_iteration1->execution();
-
-  $number_iteration1 = 0;
-  $liste_projet_admin_id_sha1_iteration1 = $apple_iteration1->add_array_element($number_iteration1);
-  $number_iteration1++;
-  $liste_projet_admin_id_iteration1 = $apple_iteration1->add_array_element($number_iteration1);
-  $number_iteration1++;
-  $liste_projet_admin_name1_iteration1 = $apple_iteration1->add_array_element($number_iteration1);
-  $number_iteration1++;
-  $liste_projet_admin_name2_iteration1 = $apple_iteration1->add_array_element($number_iteration1);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  if (count($apple_iteration1->list_row ) != 0) {
-
- 
-    $number_iteration1 = 0;
-    $liste_projet_admin_id_sha1_iteration1 = $apple_iteration1->add_array_element($number_iteration1);
-    $number_iteration1++;
-    $liste_projet_admin_id_iteration1 = $apple_iteration1->add_array_element($number_iteration1);
-    $number_iteration1++;
-    $liste_projet_admin_name1_iteration1 = $apple_iteration1->add_array_element($number_iteration1);
-    $number_iteration1++;
-    $liste_projet_admin_name2_iteration1 = $apple_iteration1->add_array_element($number_iteration1);
  
 
- 
-     
- 
+
+ echo '<div class="container p-5 my-5 menu_01">' ; 
+    echo '<h1 class="text-center">'.$liste_projet_admin_name1[0].'</h1>';
+    echo '<p>'.$liste_projet_admin_name2[0].'</p>';
+
+
+
+    ?>
+<div class="container mt-3">
+  
+  <img src="../../src/img/bokonzi.png" class="rounded" alt="Cinque Terre" width="304" height="236"> 
+</div>
+
+<?php
+
+    if($liste_projet_admin_id_parent_[0]!=""){
+   
+      ?>
+      <a href="<?php echo $src_parent?>">
+        <div   class="btn btn-secondary">Source article</div>
+      </a>
+
+      <?php
+    }
+echo '</div>' ; 
+
+
 
 
 ?>
 
-<nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"><?php  echo $liste_projet_admin_name1[0];?></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
  
-<?php
+<?php 
+$apple = new Select_datas($servername, $username, $password, $dbname);
+
+array_push(
+  $apple->row,
+  'liste_projet_admin_id_sha1',
+  'liste_projet_admin_id',
+  'liste_projet_admin_name1',
+  'liste_projet_admin_name2',
+  'liste_projet_admin_id_parent'
+);
+
+$apple->sql = 'SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1_general`!="remove" AND `liste_projet_admin_id_parent` ="' . give_url() . '" ';
+$apple->execution();
+$myJSON = json_encode($apple->list_row);
+$number = 0;
+// affectation valeur array 
+// execution et ajout des element dans la nouvelle table   
+$liste_projet_admin_id_sha1 = $apple->add_array_element($number);
+$number++;
+$liste_projet_admin_id = $apple->add_array_element($number);
+$number++;
+$liste_projet_admin_name1 = $apple->add_array_element($number);
+$number++;
+$liste_projet_admin_name2 = $apple->add_array_element($number);
+$number++;
+
+$liste_projet_admin_id_parent = $apple->add_array_element($number);
+$number++;
+
+
  
-for ($o_iteration1 = 0; $o_iteration1 < count($liste_projet_admin_id_sha1_iteration1); $o_iteration1++) {
-  echo '
-  <li class="nav-item">
-    <a class="nav-link" href="#">'.$liste_projet_admin_name1_iteration1[$o_iteration1].'</a>
-  </li>';
+
+$list_array_class = array(
+  "container p-5 my-5 border",
+  "container p-5 my-5 bg-dark text-white", 
+  "container p-5 my-5 bg-primary text-white" 
+);
+
+echo '<div class="menu_02">';
+for($a = 0 ; $a<count($liste_projet_admin_name1); $a ++) {
+?>
+<div class="<?php echo $list_array_class[fmod($a, count($list_array_class))] ?>">
+  <h1><?php echo $liste_projet_admin_name1[$a]; ?></h1>
+  <p><?php echo  $liste_projet_admin_name2[$a]; ?></p>
+<a href="<?php echo $liste_projet_admin_id_sha1[$a] ?>">
+<div   class="btn btn-primary margin_top">Voir article</div>
+</a>
+
+
+</div>
+<?php 
+  
+
+
+
+ 
 }
 
-echo '</ul>
-</div>
-</div>
-</nav>
-';
-      include("iteration/iteration2.php");
- 
 
 
-  }
+echo '<div/>';
 
-}
+
+
+
+
 
 
 ?>
@@ -187,4 +199,15 @@ echo '</ul>
     .margin_t{
       margin-top: 700px;
     }
+
+    .menu_presentation_child{
+      background-color:red ; 
+      
+    }
+    .margin_top{
+      margin-top:100px; 
+      border:1px solid rgba(0,50,0,0.8) ; 
+    }
   </style>
+
+

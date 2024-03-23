@@ -1,8 +1,23 @@
 <?php  
-include("path_class.php") ;  
+include("path_class.php") ;
+
+
+
 $liste_projet_admin_id_sha1 = $_POST["liste_projet_admin_id_sha1"] ; 
 $liste_projet_admin_name1 = $_POST["liste_projet_admin_name1"] ; 
 $liste_projet_admin_name2 = $_POST["liste_projet_admin_name2"] ;  
+
+
+
+
+
+
+
+
+
+
+
+
 $apple = new Insertion_Bdd(
       $servername,
       $username,
