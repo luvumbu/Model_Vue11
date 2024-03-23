@@ -1,6 +1,7 @@
  
   var information_user_btn_info = 0;
   function information_user_btn(_this) {
+    
 
   const information_user_login = document.getElementById("information_user_login").value ; 
   const information_user_password = document.getElementById("information_user_password").value ; 
@@ -21,7 +22,7 @@ switch (_this.title) {
 
 function cookie_info_id() {
   Ajax("cookie_info_id","class/php/cookie_info.php");
-console.log("LOG") ; 
+ 
 
 }
 
@@ -32,7 +33,7 @@ console.log("LOG") ;
     case "Inscription":
       
 console.log(_this.title);
-console.log("X") ; 
+ 
     break;
 
  
@@ -51,7 +52,11 @@ ok.add("_this_title", _this.title); // ajout d'une deuxieme information denvoi
 
 
 
+  const myTimeout = setTimeout(information_user_btn, 300);
 
+  function information_user_btn() {
+  location.reload() ; 
+  }
 
 
   } 

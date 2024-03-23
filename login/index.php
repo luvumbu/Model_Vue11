@@ -16,21 +16,16 @@ session_start() ;
 </head>
 <body>
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+<script src="home_page.js"></script>
 <?php
 include("include_class.php");
 
 if(isset($_SESSION["information_user_login"])) {
   include("index_log.php") ; 
-
 }
 else {
   include("home_page.html") ; 
 }
-
-
-
-
-
 //include("test.php") ; 
 
 ?>

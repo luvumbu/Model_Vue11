@@ -28,8 +28,8 @@ $liste_projet_admin_name2=$apple->add_array_element($number);
 $number ++ ; 
 // Itération sur les éléments de $liste_projet_admin_id_sha1
 for($o=0; $o < count($liste_projet_admin_id_sha1); $o++){
-    echo $liste_projet_admin_id_sha1[$o];
-    echo "<br/>";
+
+
     $liste_projet_admin_id_parent_ =  $liste_projet_admin_id_sha1[$o];
     
     // Nouvel objet $apple à chaque itération
@@ -43,9 +43,12 @@ for($o=0; $o < count($liste_projet_admin_id_sha1); $o++){
       'liste_projet_admin_name2'
     );
 
-    $apple_iteration->sql='SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_parent`="'.$liste_projet_admin_id_parent_.'" ';
+    $apple_iteration->sql='SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_parent`="'.$liste_projet_admin_id_parent_.'"  AND `liste_projet_admin_id_sha1_general` !="remove"' ;
     $apple_iteration->execution();
 
     include("class/php/admin_section_form.php");
 }
+
+
+
 ?>
