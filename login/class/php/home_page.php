@@ -14,17 +14,19 @@ switch ($_this_title) {
     case 'Connexion':
         $apple->sql='SELECT * FROM `information_user` WHERE `information_user_login`="'.$information_user_login.'" AND `information_user_password`="'.$information_user_password.'" ';
         $number = 0 ; 
-        $_SESSION["information_user_login"] = $information_user_login ;
-        $_SESSION["information_user_password"] = $information_user_password  ;
+
         break;
     
-    default:
-        # code...
+        case 'Inscription':
+       echo "test inscription  ok" ; 
         break;
 }
 $apple->execution();
 if(count($apple->list_row)>0){
   $_SESSION["cookie_info_connexion"] = "ON" ; 
+
+  $_SESSION["information_user_login"] = $information_user_login ;
+  $_SESSION["information_user_password"] = $information_user_password  ;
 }
 else {
   $_SESSION["cookie_info_connexion"] = "OFF" ; 
