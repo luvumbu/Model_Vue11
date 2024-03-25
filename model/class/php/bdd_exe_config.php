@@ -281,16 +281,31 @@ $execution_formulaire_php->set_action("CREATE TABLE liste_projet_admin (
   liste_projet_admin_img VARCHAR(200) NOT NULL,
   liste_projet_admin_name1 VARCHAR(200) NOT NULL, 
   liste_projet_admin_name2 VARCHAR(200) NOT NULL, 
+
+  liste_projet_admin_name1_ascii TEXT(2000) NOT NULL, 
+  liste_projet_admin_name2_ascii TEXT(2000) NOT NULL, 
+
   liste_projet_admin_name3 VARCHAR(200) NOT NULL, 
   liste_projet_admin_name4 VARCHAR(200) NOT NULL, 
 
   liste_projet_admin_name_tittle1  VARCHAR(200) NOT NULL, 
   liste_projet_admin_name_tittle2  VARCHAR(200) NOT NULL, 
+
+  liste_projet_admin_name_tittle1_ascii  TEXT(2000) NOT NULL, 
+  liste_projet_admin_name_tittle2_ascii  TEXT(2000) NOT NULL, 
+
+
   liste_projet_admin_name_tittle3  VARCHAR(200) NOT NULL, 
   liste_projet_admin_name_tittle4  VARCHAR(200) NOT NULL, 
 
   liste_projet_admin_description_tittle1 TEXT(2000) NOT NULL,
   liste_projet_admin_description_tittle2 TEXT(2000) NOT NULL,
+
+  liste_projet_admin_description_tittle1_ascii TEXT(2000) NOT NULL,
+  liste_projet_admin_description_tittle2_ascii TEXT(2000) NOT NULL,
+
+
+   
   liste_projet_admin_description_tittle3 TEXT(2000) NOT NULL,
   liste_projet_admin_description_tittle4 TEXT(2000) NOT NULL,
   liste_projet_admin_description1 TEXT(2000) NOT NULL,

@@ -59,4 +59,10 @@
    $liste_projet_last_update=$apple->add_array_element($number);
    $number ++ ; 
    $liste_projet_reg_date=$apple->add_array_element($number);
+
+   $number ++ ; 
+   $liste_projet_admin_name1_ascii=$apple->add_array_element($number);
+
+   $number ++ ; 
+   $liste_projet_admin_name2_ascii=$apple->add_array_element($number);
    ?>

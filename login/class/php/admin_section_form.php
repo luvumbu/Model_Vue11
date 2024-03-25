@@ -1,11 +1,39 @@
 <?php
 for($o =0; $o<count($liste_projet_admin_id); $o++){
+
+
+
+
+
+
+
+
+
+
+  $mot_d_origine1 = '';
+
+  $ascii_codes = explode(' ', trim($liste_projet_admin_name1_ascii[$o]));
+  foreach ($ascii_codes as $ascii_code) {
+      $mot_d_origine1 .= chr($ascii_code);
+  }
+
+  $mot_d_origine2 = '';
+
+  $ascii_codes = explode(' ', trim($liste_projet_admin_name2_ascii[$o]));
+  foreach ($ascii_codes as $ascii_code) {
+      $mot_d_origine2 .= chr($ascii_code);
+  }
+  
+ 
+
+
+
     ?>
       <li class="list-group-item d-flex justify-content-between align-items-start">
         <div class="ms-2 me-auto">
-          <div class="fw-bold"><input style="width:500px" onkeyup="liste_projet_admin_onkeyup(this)" id="<?php echo "a_".$liste_projet_admin_id_sha1[$o] ?>"  title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" type="text" value="<?php echo $liste_projet_admin_name1[$o] ?>"></div>
+          <div class="fw-bold"><input style="width:500px" onkeyup="liste_projet_admin_onkeyup(this)" id="<?php echo "a_".$liste_projet_admin_id_sha1[$o] ?>"  title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" type="text" value="<?php echo $mot_d_origine1 ?>"></div>
          
-          <div class="fw-bold"> <textarea  style="width:500px" onkeyup="liste_projet_admin_onkeyup(this)" id="<?php echo "b_".$liste_projet_admin_id_sha1[$o] ?>"  title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" type="text" name="" id="" cols="30" rows="10"><?php echo $liste_projet_admin_name2[$o] ?></textarea>
+          <div class="fw-bold"> <textarea  style="width:500px" onkeyup="liste_projet_admin_onkeyup(this)" id="<?php echo "b_".$liste_projet_admin_id_sha1[$o] ?>"  title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" type="text" name="" id="" cols="30" rows="10"><?php echo $mot_d_origine2 ?></textarea>
         </div>
         </div>
     
