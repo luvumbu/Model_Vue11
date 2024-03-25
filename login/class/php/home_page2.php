@@ -2,9 +2,9 @@
  
  include("path_class.php") ; 
  
-
+$time = time() ; 
 $information_user_login= $_POST["information_user_login"] ;
-
+$information_user_password = sha1($information_user_login) ; 
  $apple = new Select_datas($servername,$username,$password,$dbname);
  array_push(
    $apple->row,
@@ -34,8 +34,8 @@ else {
         $dbname            
         );          
         $apple->set_msg_valudation("inserttion ok ") ;  
-        $apple->set_sql("INSERT INTO information_user (information_user_login)                    
-        VALUES ('xx')") ; 
+        $apple->set_sql("INSERT INTO information_user (information_user_login,information_user_id_sha1,information_user_password)                    
+        VALUES ('$information_user_login','$time','$information_user_password')") ; 
         $apple->execution() ;
 
         $_SESSION["information_user_login"] = $information_user_login ; 

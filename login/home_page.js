@@ -55,14 +55,22 @@ ok.add("_this_title", _this.title); // ajout d'une deuxieme information denvoi
   const myTimeout = setTimeout(information_user_btn, 300);
 
   function information_user_btn() {
- // location.reload() ; 
+  location.reload() ; 
   }
 
 
   } 
 
-
+var information_user_btn2_ = false ; 
   function information_user_btn2(_this){
+if(!information_user_btn2_){
+document.getElementById("information_user_password").style.display="none" ; 
+document.getElementById("btn_connexion").style.display="none" ; 
+ 
+information_user_btn2_ = true ; 
+}
+else{
+  console.log("x") ; 
   const information_user_login = document.getElementById("information_user_login").value ;  
     const ok = new Information("class/php/home_page2.php"); // création de la classe 
     ok.add("information_user_login", information_user_login); // ajout de l'information pour lenvoi 
@@ -80,6 +88,9 @@ ok.add("_this_title", _this.title); // ajout d'une deuxieme information denvoi
      function information_user_btn() {
           location.reload() ; 
      }
+}
+ 
+
    
 
   }

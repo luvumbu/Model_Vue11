@@ -20,14 +20,10 @@ session_start() ;
 <?php
 include("include_class.php");
 
-if(isset($_SESSION["information_user_login"])) {
-  
-  
+if(isset($_SESSION["information_user_login"])) {  
   include("index_log.php") ; 
-
 }
-else {
-  
+else {  
   include("home_page.html") ; 
 }
 //include("test.php") ; 

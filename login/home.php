@@ -84,9 +84,9 @@ if (count($apple->list_row) == 0) {
 
 
     ?>
-<div class="container mt-3">
+<div class="container mt-3 rounded_p">
   
-  <img src="../../src/img/bokonzi.png" class="rounded" alt="Cinque Terre" width="304" height="236"> 
+  <img src="../../src/img/bokonzi.png" class="rounded" alt="Cinque Terre" > 
 </div>
 
 <?php
@@ -207,6 +207,19 @@ echo '<div/>';
     .margin_top{
       margin-top:100px; 
       border:1px solid rgba(0,50,0,0.8) ; 
+    }
+.rounded_p{
+  width:50%;
+  margin: auto;
+  margin-top: 150px;
+      margin-bottom: 150px;
+}
+    .rounded{
+      text-align: center;
+     
+      margin: auto;
+ 
+      width: 100%;
     }
   </style>
 
