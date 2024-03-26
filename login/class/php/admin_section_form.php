@@ -1,29 +1,34 @@
 <?php
 for($o =0; $o<count($liste_projet_admin_id); $o++){
-
-
-
-
-
-
-
-
-
+ 
 
   $mot_d_origine1 = '';
+  $mot_d_origine2 = '';
+ if($liste_projet_admin_name1[$o]!=""){
+
 
   $ascii_codes = explode(' ', trim($liste_projet_admin_name1_ascii[$o]));
   foreach ($ascii_codes as $ascii_code) {
       $mot_d_origine1 .= chr($ascii_code);
   }
+ }
+ 
 
-  $mot_d_origine2 = '';
+ if($liste_projet_admin_name2[$o]!=""){
+ 
+  
 
   $ascii_codes = explode(' ', trim($liste_projet_admin_name2_ascii[$o]));
   foreach ($ascii_codes as $ascii_code) {
       $mot_d_origine2 .= chr($ascii_code);
+ }
+ 
+
+
+
+
+ 
   }
-  
  
 
 

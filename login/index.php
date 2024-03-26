@@ -1,6 +1,5 @@
 <?php  
-session_start() ; 
- 
+session_start() ;  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,6 +35,15 @@ else {
     cursor: pointer;
   }
 
+
+  input,textarea{
+    border: ;
+    margin-top:25px ;margin-bottom: 25px;
+    padding: 5px;
+    border-radius: 5px;
+    border:1px solid rgba(0,0,0,0.1) ; 
+
+  }
  
  </style>
 </body>

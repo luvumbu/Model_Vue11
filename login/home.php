@@ -20,7 +20,6 @@ array_push(
   'liste_projet_admin_name1_ascii',
   'liste_projet_admin_name2_ascii'
 );
-
 $apple->sql = 'SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1_general`!="remove" AND `liste_projet_admin_id_sha1` ="' . give_url() . '" ';
 $apple->execution();
 $myJSON = json_encode($apple->list_row);
@@ -35,31 +34,19 @@ $liste_projet_admin_name1 = $apple->add_array_element($number);
 $number++;
 $liste_projet_admin_name2 = $apple->add_array_element($number);
 $number++;
-
 $liste_projet_admin_id_parent_ = $apple->add_array_element($number);
 $number++;
-
 $liste_projet_admin_name1_ascii = $apple->add_array_element($number);
 $number++;
 $liste_projet_admin_name2_ascii = $apple->add_array_element($number);
 $number++;
-
-
-
-
-
 $src_parent = $liste_projet_admin_id_parent_[0];
 ?>
 
 
 
 <?php
-
-
 if (count($apple->list_row) == 0) {
-
-
-
   ?>
   <img style="width:60%" src="http://i55.servimg.com/u/f55/13/89/58/68/error410.jpg" alt="" srcset="">
 
@@ -81,40 +68,22 @@ if (count($apple->list_row) == 0) {
 
   <body>
     <?php
-
 }
-
-
-
-
-
 // Convertit les codes ASCII en caractères pour reconstruire le mot d'origine
 $liste_projet_admin_name1_d_origine = '';
 $ascii_codes = explode(' ', trim($liste_projet_admin_name1_ascii[0]));
 foreach ($ascii_codes as $ascii_code) {
   $liste_projet_admin_name1_d_origine .= chr($ascii_code);
 }
-
-
-
-
 $liste_projet_admin_name2_d_origine = '';
 $ascii_codes = explode(' ', trim($liste_projet_admin_name2_ascii[0]));
 foreach ($ascii_codes as $ascii_code) {
   $liste_projet_admin_name2_d_origine .= chr($ascii_code);
 }
-
-
-
-
-
- echo "<div class='home_0'>" ; 
+  echo "<div class='home_0'>" ; 
   echo '<h1>' . $liste_projet_admin_name1_d_origine . '</h1>';
   echo '<p>' . $liste_projet_admin_name2_d_origine . '</p>';
   echo "</div>" ; 
- 
- 
-
   if ($liste_projet_admin_id_parent_[0] != "") {
 
   }
