@@ -69,7 +69,62 @@ if (count($apple->list_row) == 0) {
   <body>
     <?php
 }
-// Convertit les codes ASCII en caractères pour reconstruire le mot d'origine
+
+
+
+
+
+
+
+
+
+
+$mot_d_origine1 = '';
+$mot_d_origine2 = '';
+if ($liste_projet_admin_name1[$o] != "") {
+
+
+  $ascii_codes = explode(' ', trim($liste_projet_admin_name1_ascii[$o]));
+  foreach ($ascii_codes as $ascii_code) {
+    $mot_d_origine1 .= chr($ascii_code);
+  }
+}
+
+
+if ($liste_projet_admin_name2[$o] != "") {
+
+
+
+  $ascii_codes = explode(' ', trim($liste_projet_admin_name2_ascii[$o]));
+  foreach ($ascii_codes as $ascii_code) {
+    $mot_d_origine2 .= chr($ascii_code);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $liste_projet_admin_name1_d_origine = '';
 $ascii_codes = explode(' ', trim($liste_projet_admin_name1_ascii[0]));
 foreach ($ascii_codes as $ascii_code) {
@@ -128,6 +183,57 @@ foreach ($ascii_codes as $ascii_code) {
 
 
 
+
+
+
+
+
+
+
+
+  $mot_d_origine1 = '';
+  $mot_d_origine2 = '';
+  if ($liste_projet_admin_name1[$o] != "") {
+  
+  
+    $ascii_codes = explode(' ', trim($liste_projet_admin_name1_ascii[$o]));
+    foreach ($ascii_codes as $ascii_code) {
+      $mot_d_origine1 .= chr($ascii_code);
+    }
+  }
+  
+  
+  if ($liste_projet_admin_name2[$o] != "") {
+  
+  
+  
+    $ascii_codes = explode(' ', trim($liste_projet_admin_name2_ascii[$o]));
+    foreach ($ascii_codes as $ascii_code) {
+      $mot_d_origine2 .= chr($ascii_code);
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   $list_array_class = array(
     "container p-5 my-5 border",
     "container p-5 my-5 bg-dark text-white",
@@ -142,10 +248,10 @@ foreach ($ascii_codes as $ascii_code) {
     ?>
     <div class="home_2">
         <h1>
-          <?php echo $liste_projet_admin_name1[$a]; ?>
+          <?php echo $mot_d_origine1; ?>
         </h1>
         <p>
-          <?php echo $liste_projet_admin_name2[$a]; ?>
+          <?php echo $mot_d_origine2; ?>
         </p>
     </div>
 
