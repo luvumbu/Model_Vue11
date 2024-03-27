@@ -79,10 +79,21 @@
     const myTimeout = setTimeout(liste_projet_admin_remove, 250);
     function liste_projet_admin_remove() {
       Ajax("admin_section_1", "class/php/admin_section_1.php");
- 
+     }
+  }
 
+  function liste_projet_admin_remove2(_this) {
+    _this.style.display="none";
 
-    }
+    const ok = new Information("class/php/cookie/liste_projet_admin_remove.php"); // création de la classe 
+    ok.add("liste_projet_admin_id_sha1", _this.title); // ajout d'une deuxieme information denvoi 
+    console.log(ok.info()); // demande l'information dans le tableau
+    ok.push(); // envoie l'information au code pkp 
+    const myTimeout = setTimeout(liste_projet_admin_remove, 250);
+    function liste_projet_admin_remove() {
+      Ajax("admin_section_1", "all_table.php");
+
+     }
   }
 
   function all_element() {
