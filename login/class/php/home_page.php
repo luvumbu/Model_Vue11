@@ -27,6 +27,10 @@ if(count($apple->list_row)>0){
 
   $_SESSION["information_user_login"] = $information_user_login ;
   $_SESSION["information_user_password"] = $information_user_password  ;
+  $_SESSION["information_user_id_sha1"] = sha1($information_user_login)  ;
+
+
+  
 }
 else {
   $_SESSION["cookie_info_connexion"] = "OFF" ; 

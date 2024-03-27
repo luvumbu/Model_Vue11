@@ -22,12 +22,7 @@ for($o =0; $o<count($liste_projet_admin_id); $o++){
   foreach ($ascii_codes as $ascii_code) {
       $mot_d_origine2 .= chr($ascii_code);
  }
- 
-
-
-
-
- 
+  
   }
  
 
@@ -41,14 +36,16 @@ for($o =0; $o<count($liste_projet_admin_id); $o++){
           <div class="fw-bold"> <textarea  style="width:500px" onkeyup="liste_projet_admin_onkeyup(this)" id="<?php echo "b_".$liste_projet_admin_id_sha1[$o] ?>"  title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" type="text" name="" id="" cols="30" rows="10"><?php echo $mot_d_origine2 ?></textarea>
         </div>
         </div>
+       <img width="50" class="cursor_pointer" height="50" src="https://img.icons8.com/office/50/picture.png" alt="picture"/>
+
     
      <div class="add_visibility">
-     <img onclick="liste_projet_admin_add(this)" width="50" title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" height="50" src="https://img.icons8.com/officel/50/add--v1.png" alt="add--v1" class="cursor_pointer"/> 
+     <img onclick="add_admin1(this)" width="50" title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" height="50" src="https://img.icons8.com/officel/50/add--v1.png" alt="add--v1" class="cursor_pointer"/> 
 
      </div>
+     <img  onclick="liste_projet_admin_remove(this)" width="50" title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" width="50" class="cursor_pointer" height="50" src="https://img.icons8.com/ios/50/delete-forever--v1.png" alt="delete-forever--v1"/>
+
        <img onclick="liste_projet_admin_show(this)" width="50" title="<?php echo $liste_projet_admin_id_sha1[$o] ?>"  width="50" class="cursor_pointer" height="50" src="https://img.icons8.com/android/50/visible.png" alt="visible"/>
-       <img width="50" class="cursor_pointer" height="50" src="https://img.icons8.com/office/50/picture.png" alt="picture"/>
-        <img  onclick="liste_projet_admin_remove(this)" width="50" title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" width="50" class="cursor_pointer" height="50" src="https://img.icons8.com/ios/50/delete-forever--v1.png" alt="delete-forever--v1"/>
 
 <a href="home.php/<?php echo $liste_projet_admin_id_sha1[$o] ?>">
     <img   width="50" title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" width="50" class="cursor_pointer" height="50" src="https://img.icons8.com/ios/50/link--v1.png" alt="delete-forever--v1"/>

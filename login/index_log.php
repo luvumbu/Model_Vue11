@@ -31,7 +31,7 @@ $information_user_password = $_SESSION["information_user_password"];
 </div>
 <div class="container p-5 my-5 bg-primary text-white">
   <h1>add setting</h1>
-  <p><img onclick="add_admin(this)" width="50" height="50" src="https://img.icons8.com/officel/50/add--v1.png"
+  <p><img onclick="add_admin1(this)" width="50" height="50" src="https://img.icons8.com/officel/50/add--v1.png"
       alt="add--v1" class="cursor_pointer" /></p>
 </div>
 <div class="container p-5 my-5 bg-dark text-white">

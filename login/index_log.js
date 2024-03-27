@@ -1,14 +1,14 @@
-  function add_admin(_this) {
+ 
 
+  function add_admin1(_this) {
     _this.style.display="none";
-    const ok = new Information("class/php/add_admin.php"); // création de la classe 
-    ok.add("_this_title", _this.title); // ajout d'une deuxieme information denvoi  
+    const ok = new Information("class/php/add_admin1.php"); // création de la classe 
+    ok.add("liste_projet_admin_id_parent", _this.title); // ajout d'une deuxieme information denvoi  
     console.log(ok.info()); // demande l'information dans le tableau
     ok.push(); // envoie l'information au code pkp 
-    Ajax("admin_section_1", "class/php/admin_section_1.php");
-    const myTimeout = setTimeout(add_admin, 250);
-    function add_admin() {
-      Ajax("admin_section_1", "class/php/admin_section_1.php");
+    const myTimeout = setTimeout(liste_projet_admin_add, 250);
+    function liste_projet_admin_add() {
+      Ajax("admin_section_1", "class/php/admin_section_1_1.php");
     _this.style.display="block";
 
     }
@@ -24,20 +24,7 @@
     ok.push(); // envoie l'information au code pkp 
   }
 
-  function liste_projet_admin_add(_this) {
-    _this.style.display="none";
 
-    const ok = new Information("class/php/cookie/liste_projet_admin_add.php"); // création de la classe 
-    ok.add("liste_projet_admin_id_parent", _this.title); // ajout d'une deuxieme information denvoi  
-    console.log(ok.info()); // demande l'information dans le tableau
-    ok.push(); // envoie l'information au code pkp 
-    const myTimeout = setTimeout(liste_projet_admin_add, 250);
-    function liste_projet_admin_add() {
-      Ajax("admin_section_1", "class/php/admin_section_1_1.php");
-    _this.style.display="block";
-
-    }
-  }
   function liste_projet_admin_add2(_this) {
     _this.style.display="none";
 
