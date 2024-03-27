@@ -5,9 +5,10 @@ $information_user_password = $_SESSION["information_user_password"];
 
 <div class="container mt-5 text-center">
   <?php
-
+$root_user= false;
   if ($information_user_login == $username && $information_user_password == sha1($password)) {
     echo '<img width="50" height="50" src="https://img.icons8.com/fluency/50/crown.png" alt="crown"/>';
+    $root_user = true;
   }
 
   ?>
@@ -27,6 +28,16 @@ $information_user_password = $_SESSION["information_user_password"];
       <img width="48" height="48" src="https://img.icons8.com/color/48/disconnect-main-plug.png"
         alt="disconnect-main-plug" />
     </div>
+    <?php
+if($root_user){
+  ?>
+    <div class="col-sm-4" style="margin-top:100px" onclick="all_element_admin()">
+      <h3>Element suprimée</h3>
+      <img width="48" height="48" src="https://img.icons8.com/matisse/48/remove--v2.png" alt="remove--v2"/>
+    </div>
+  <?php
+}
+    ?>
   </div>
 </div>
 <div class="container p-5 my-5 bg-primary text-white">

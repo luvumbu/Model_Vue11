@@ -34,7 +34,7 @@
     ok.push(); // envoie l'information au code pkp 
     const myTimeout = setTimeout(liste_projet_admin_add2, 250);
     function liste_projet_admin_add2() {
-      Ajax("admin_section_1", "all_table.php");
+      Ajax("admin_section_1", "all_element.php");
     _this.style.display="block";
 
     }
@@ -78,13 +78,16 @@
     ok.push(); // envoie l'information au code pkp 
     const myTimeout = setTimeout(liste_projet_admin_remove, 250);
     function liste_projet_admin_remove() {
-      Ajax("admin_section_1", "all_table.php");
+      Ajax("admin_section_1", "all_element.php");
 
      }
   }
 
   function all_element() {
-    Ajax("admin_section_1", "all_table.php");
+    Ajax("admin_section_1", "all_element.php");
+  }
+  function all_element_admin() {
+   // Ajax("admin_section_1", "all_element_admin.php");
   }
 
 
