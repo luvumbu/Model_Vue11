@@ -1,6 +1,5 @@
 <?php 
 session_start() ; 
-
 switch ($_SESSION["cookie_info_connexion"]) {
     case 'OFF':
      echo '<a class="alert alert-danger" role="alert">

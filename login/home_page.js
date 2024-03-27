@@ -45,14 +45,7 @@ ok.add("_this_title", _this.title); // ajout d'une deuxieme information denvoi
   console.log(ok.info()); // demande l'information dans le tableau
   ok.push(); // envoie l'information au code pkp 
 
-
-
-
-
-
-
-
-  const myTimeout = setTimeout(information_user_btn, 300);
+ const myTimeout = setTimeout(information_user_btn, 300);
 
   function information_user_btn() {
   location.reload() ; 
@@ -76,7 +69,7 @@ else{
     ok.add("information_user_login", information_user_login); // ajout de l'information pour lenvoi 
       
    
-   ok.add("_this_title", _this.title); // ajout d'une deuxieme information denvoi  
+     ok.add("_this_title", _this.title); // ajout d'une deuxieme information denvoi  
      console.log(ok.info()); // demande l'information dans le tableau
      ok.push(); // envoie l'information au code pkp 
    
@@ -92,5 +85,40 @@ else{
  
 
    
+
+  }
+
+
+  function add_picture(_this){
+ 
+
+
+    const ok = new Information("class/php/cookie/add_picture.php"); // création de la classe 
+ 
+      
+   
+     ok.add("add_picture", _this.title); // ajout d'une deuxieme information denvoi  
+     console.log(ok.info()); // demande l'information dans le tableau
+     ok.push(); // envoie l'information au code pkp 
+
+
+
+     const myTimeout = setTimeout(add_picture, 1000);
+
+function add_picture() {
+  window.location.replace("add_picture/index.php");
+}
+
+
+     
+
+
+
+
+
+
+
+
+
 
   }

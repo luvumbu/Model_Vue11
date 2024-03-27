@@ -34,5 +34,4 @@
     'liste_projet_admin_name1_ascii',
     'liste_projet_admin_name2_ascii'
     );
-
     ?>

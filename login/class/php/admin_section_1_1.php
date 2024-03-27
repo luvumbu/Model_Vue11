@@ -87,10 +87,3 @@ include ("admin_section_form.php");
       <p class="text-center">Text</p>
     </div>
 </ol>
-
-
-
-
-
-
- 

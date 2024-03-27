@@ -14,21 +14,12 @@ $information_user_password = sha1($information_user_login) ;
    $apple->execution();
    $myJSON = json_encode($apple->list_row); 
 
-
-
-
-
-
 if(count($apple->list_row)!=0){
 
 echo $apple->list_row[0] ; 
 
 }
 else {
-
-
-
-
     $apple = new Insertion_Bdd(
         $servername,
         $username,
@@ -45,26 +36,7 @@ else {
          $_SESSION["information_user_password"]= "X" ; 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-         $to = $information_user_login;
+        $to = $information_user_login;
          $subject = 'Bienvenue sur BOKONZI - Activation de votre compte';
          
          // Obtention de la valeur de time()
@@ -103,31 +75,6 @@ else {
          } else {
              echo 'Erreur lors de l\'envoi de l\'e-mail.';
          }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-         
-
 
 }
 

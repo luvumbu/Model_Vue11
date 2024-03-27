@@ -90,11 +90,11 @@ if($information_user_id_sha1_0==$information_user_id_sha1_1){
 <div class="add_visibility">
 <img onclick="add_admin1(this)" width="50" title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" height="50" src="https://img.icons8.com/officel/50/add--v1.png" alt="add--v1" class="cursor_pointer"/> 
 </div>
-<img width="50" class="cursor_pointer" height="50" src="https://img.icons8.com/office/50/picture.png" alt="picture"/>
+ 
+<img width="50" onclick="add_picture(this)" title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" class="cursor_pointer" height="50" src="https://img.icons8.com/office/50/picture.png" alt="picture"/>
 <img  onclick="liste_projet_admin_remove(this)" width="50" title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" width="50" class="cursor_pointer" height="50" src="https://img.icons8.com/ios/50/delete-forever--v1.png" alt="delete-forever--v1"/>
  
-    
-
+ 
 <?php
 }
 else {
@@ -108,11 +108,10 @@ else {
 <div class="add_visibility">
 <img onclick="add_admin1(this)" width="50" title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" height="50" src="https://img.icons8.com/officel/50/add--v1.png" alt="add--v1" class="cursor_pointer"/> 
 </div>
-<img width="50" class="cursor_pointer" height="50" src="https://img.icons8.com/office/50/picture.png" alt="picture"/>
+ 
+<img width="50" class="cursor_pointer" onclick="add_picture(this)" height="50" title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" src="https://img.icons8.com/office/50/picture.png" alt="picture"/>
 <img  onclick="liste_projet_admin_remove(this)" width="50" title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" width="50" class="cursor_pointer" height="50" src="https://img.icons8.com/ios/50/delete-forever--v1.png" alt="delete-forever--v1"/>
  
-    
-
 <?php
  
  
