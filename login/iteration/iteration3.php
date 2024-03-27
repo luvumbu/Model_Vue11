@@ -99,7 +99,7 @@ for ($iteration_3x = 0; $iteration_3x < count($liste_projet_admin_id_sha1_iterat
 
 
 
-  echo '<div class="iteration3_0">';
+  echo '<div class="iteration3_0 iterationimg_all">';
   echo "<h1>" . $mot_d_origine1 . "</h1>";
   echo "<p>" . $mot_d_origine2 . "</p>";
   echo '</div>';

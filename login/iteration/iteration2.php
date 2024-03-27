@@ -97,7 +97,7 @@
   
   
   
-      echo '<div class="iteration2_0">';
+      echo '<div class="iteration2_0 iterationimg_all">';
       echo "<h1>" .$mot_d_origine1 . "</h1>";
       echo "<p>" . $mot_d_origine2 . "</p>";
       echo '</div>';

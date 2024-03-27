@@ -150,7 +150,7 @@
 
 
 
-    echo '<div class="iteration1_0">';
+    echo '<div class="iteration1_0 iterationimg_all">';
     echo "<h1>" . $mot_d_origine1 . "</h1>";
     echo "<p>" . $mot_d_origine2 . "</p>";
     echo '</div>';
@@ -181,5 +181,29 @@
 <style>
   .iterationimg_all img {
     max-width: 250px;
+ 
+  margin-top:100px; 
+  margin-bottom:100px; 
   }
+  .iterationimg_all{
+    width: 80% ; 
+   
+    margin: auto;   text-align: center;
+  }
+  .iterationimg_all p {
+    text-align: justify;
+  }
+  .iterationimg_all p, .iterationimg_all h1 {
+  padding: 15px;
+  }
+
+
+
+  @media screen and (max-width: 1200px) {
+    .iterationimg_all{
+    width: 90% ; 
+   
+   
+  }
+}
 </style>
