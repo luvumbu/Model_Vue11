@@ -81,21 +81,21 @@ if (count($apple->list_row) == 0) {
 
 $mot_d_origine1 = '';
 $mot_d_origine2 = '';
-if ($liste_projet_admin_name1[$o] != "") {
+if ($liste_projet_admin_name1[0] != "") {
 
 
-  $ascii_codes = explode(' ', trim($liste_projet_admin_name1_ascii[$o]));
+  $ascii_codes = explode(' ', trim($liste_projet_admin_name1_ascii[0]));
   foreach ($ascii_codes as $ascii_code) {
     $mot_d_origine1 .= chr($ascii_code);
   }
 }
 
 
-if ($liste_projet_admin_name2[$o] != "") {
+if ($liste_projet_admin_name2[0] != "") {
 
 
 
-  $ascii_codes = explode(' ', trim($liste_projet_admin_name2_ascii[$o]));
+  $ascii_codes = explode(' ', trim($liste_projet_admin_name2_ascii[0]));
   foreach ($ascii_codes as $ascii_code) {
     $mot_d_origine2 .= chr($ascii_code);
   }
@@ -187,32 +187,34 @@ foreach ($ascii_codes as $ascii_code) {
 
 
 
+ 
 
 
-
-
+if(count( $liste_projet_admin_id_sha1) !=0){
   $mot_d_origine1 = '';
   $mot_d_origine2 = '';
-  if ($liste_projet_admin_name1[$o] != "") {
+  if ($liste_projet_admin_name1[0] != "") {
   
   
-    $ascii_codes = explode(' ', trim($liste_projet_admin_name1_ascii[$o]));
+    $ascii_codes = explode(' ', trim($liste_projet_admin_name1_ascii[0]));
     foreach ($ascii_codes as $ascii_code) {
       $mot_d_origine1 .= chr($ascii_code);
     }
   }
   
   
-  if ($liste_projet_admin_name2[$o] != "") {
+  if ($liste_projet_admin_name2[0] != "") {
   
   
   
-    $ascii_codes = explode(' ', trim($liste_projet_admin_name2_ascii[$o]));
+    $ascii_codes = explode(' ', trim($liste_projet_admin_name2_ascii[0]));
     foreach ($ascii_codes as $ascii_code) {
       $mot_d_origine2 .= chr($ascii_code);
     }
   }
 
+}
+ 
 
 
 
@@ -220,6 +222,7 @@ foreach ($ascii_codes as $ascii_code) {
 
 
 
+ 
 
 
 
