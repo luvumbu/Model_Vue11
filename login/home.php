@@ -48,7 +48,7 @@
     'liste_projet_admin_name_tittle2_ascii',
     'liste_projet_admin_name_tittle3',
     'liste_projet_admin_name_tittle4',
-    'liste_projet_admin_new_file' 
+    'liste_projet_admin_new_file'
 
   );
 
@@ -111,38 +111,38 @@
   $liste_projet_admin_name_tittle4_iteration_1 = $apple_iteration_1->add_array_element($number_iteration_1);
   $number_iteration_1++;
   $liste_projet_admin_new_file_iteration_1 = $apple_iteration_1->add_array_element($number_iteration_1);
- 
-
-
-
- 
 
 
 
 
 
 
-  
+
+
+
+
+
+
 
   for ($iteration_1x = 0; $iteration_1x < count($liste_projet_admin_id_sha1_iteration_1); $iteration_1x++) {
 
 
 
- 
+
     $mot_d_origine1 = '';
     $ascii_codes = explode(' ', trim($liste_projet_admin_name1_ascii_iteration_1[$iteration_1x]));
     foreach ($ascii_codes as $ascii_code) {
-        $mot_d_origine1 .= chr($ascii_code);
+      $mot_d_origine1 .= chr($ascii_code);
     }
 
 
     $mot_d_origine2 = '';
     $ascii_codes = explode(' ', trim($liste_projet_admin_name2_ascii_iteration_1[$iteration_1x]));
     foreach ($ascii_codes as $ascii_code) {
-        $mot_d_origine2 .= chr($ascii_code);
+      $mot_d_origine2 .= chr($ascii_code);
     }
-   
-   
+
+
 
 
 
@@ -151,19 +151,22 @@
 
 
     echo '<div class="iteration1_0">';
-    echo "<h1>" .$mot_d_origine1 . "</h1>";
+    echo "<h1>" . $mot_d_origine1 . "</h1>";
     echo "<p>" . $mot_d_origine2 . "</p>";
     echo '</div>';
-  
- 
 
-    if($liste_projet_admin_new_file_iteration_1[$iteration_1x]!=""){      
-    echo '<div class="iteration1_0_img iterationimg_all">';      
+
+
+    if ($liste_projet_admin_new_file_iteration_1[$iteration_1x] != "") {
+      echo '<div class="iteration1_0_img iterationimg_all">';
       ?>
-<img src="../add_picture/<?php echo $liste_projet_admin_new_file_iteration_1[$iteration_1x]?>" alt="" srcset="">
+
+      <a href="../add_picture/<?php echo $liste_projet_admin_new_file_iteration_1[$iteration_1x] ?>">
+        <img src="../add_picture/<?php echo $liste_projet_admin_new_file_iteration_1[$iteration_1x] ?>" alt="" srcset="">
+      </a>
 
       <?php
-    echo '</div>';
+      echo '</div>';
 
     }
     $iteration2_x = $liste_projet_admin_id_sha1_iteration_1[$iteration_1x];
@@ -176,7 +179,7 @@
 </html>
 
 <style>
-  .iterationimg_all img{
+  .iterationimg_all img {
     max-width: 250px;
   }
 </style>

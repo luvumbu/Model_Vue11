@@ -107,8 +107,9 @@
       if($liste_projet_admin_new_file_iteration_2[$iteration_2x]!=""){      
         echo '<div class="iteration2_0_img iterationimg_all">';      
           ?>
+    <a href="../add_picture/<?php echo $liste_projet_admin_new_file_iteration_2[$iteration_2x]?>">
     <img src="../add_picture/<?php echo $liste_projet_admin_new_file_iteration_2[$iteration_2x]?>" alt="" srcset="">
-    
+    </a>
           <?php
         echo '</div>';
     
