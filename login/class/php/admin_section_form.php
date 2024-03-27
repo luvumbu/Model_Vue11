@@ -1,4 +1,9 @@
 <?php
+
+if(!isset($_SESSION["information_user_login"])){
+  session_start(); 
+  }
+  
 for($o =0; $o<count($liste_projet_admin_id); $o++){
  
 
@@ -43,11 +48,15 @@ for($o =0; $o<count($liste_projet_admin_id); $o++){
         <div class="ms-2 me-auto">
 
         <?php 
-    if($information_user_id_sha1_0==$information_user_id_sha1_1){
+    if($information_user_id_sha1_0!=$information_user_id_sha1_1){
 
     ?>
-         <div class="fw-bold"><input class="input" style="width:500px" onkeyup="liste_projet_admin_onkeyup(this)" id="<?php echo "a_".$liste_projet_admin_id_sha1[$o] ?>"  title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" type="text" value="<?php echo $mot_d_origine1 ?>"></div>
-          <div class="fw-bold"> <textarea  class="textarea" style="width:500px" onkeyup="liste_projet_admin_onkeyup(this)" id="<?php echo "b_".$liste_projet_admin_id_sha1[$o] ?>"  title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" type="text" name="" id="" cols="30" rows="10"><?php echo $mot_d_origine2 ?></textarea>
+         <div class="fw-bold"><?php echo $mot_d_origine1 ?></div>
+         <div class="fw-bold"><?php echo $mot_d_origine2 ?></div>
+
+ 
+
+
 
     <?php
       
@@ -130,6 +139,6 @@ else {
 <style>
   .input,
   .textarea{
-background-color: rgba(0, 0, 150, 0.3);
+background-color: rgba(0, 0, 50, 0.1);
   }
 </style>
