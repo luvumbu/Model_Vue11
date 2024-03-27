@@ -50,9 +50,25 @@ for($o =0; $o<count($liste_projet_admin_id); $o++){
         <?php 
     if($information_user_id_sha1_0!=$information_user_id_sha1_1){
 
-    ?>
+
+
+      if( $root_admin){
+        ?>
+         <div class="fw-bold"><input   style="width:500px" onkeyup="liste_projet_admin_onkeyup(this)" id="<?php echo "a_".$liste_projet_admin_id_sha1[$o] ?>"  title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" type="text" value="<?php echo $mot_d_origine1 ?>"></div>
+          <div class="fw-bold"> <textarea    style="width:500px" onkeyup="liste_projet_admin_onkeyup(this)" id="<?php echo "b_".$liste_projet_admin_id_sha1[$o] ?>"  title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" type="text" name="" id="" cols="30" rows="10"><?php echo $mot_d_origine2 ?></textarea>
+
+        <?php
+      }
+      else {
+        ?>
          <div class="fw-bold"><?php echo $mot_d_origine1 ?></div>
          <div class="fw-bold"><?php echo $mot_d_origine2 ?></div>
+        <?php
+      }
+    ?>
+
+
+
 
  
 

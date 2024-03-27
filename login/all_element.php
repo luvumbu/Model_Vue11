@@ -33,7 +33,7 @@ for($o=0; $o < count($liste_projet_admin_id_sha1); $o++){
     $apple_iteration->sql='SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_parent`="'.$liste_projet_admin_id_parent_.'"  AND `liste_projet_admin_id_sha1_general` !="remove"' ;
     $apple_iteration->execution();
 
-    include("class/php/admin_section_form3.php");
+    include("class/php/admin_section_form.php");
 }
 
 
