@@ -1,7 +1,10 @@
 <?php
 
-if(!isset($_SESSION["information_user_login"])){
-  session_start(); 
+if(isset($_SESSION["information_user_login"])){
+ 
+  }
+  else {
+    session_start() ; 
   }
   
 for($o =0; $o<count($liste_projet_admin_id); $o++){
@@ -65,17 +68,7 @@ for($o =0; $o<count($liste_projet_admin_id); $o++){
          <div class="fw-bold"><?php echo $mot_d_origine2 ?></div>
         <?php
       }
-    ?>
-
-
-
-
- 
-
-
-
-    <?php
-      
+  
          }
          else {
           ?>
