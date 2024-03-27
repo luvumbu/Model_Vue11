@@ -87,7 +87,7 @@
     Ajax("admin_section_1", "all_element.php");
   }
   function all_element_admin() {
-   // Ajax("admin_section_1", "all_element_admin.php");
+   Ajax("admin_section_1", "all_element_admin.php");
   }
 
 
