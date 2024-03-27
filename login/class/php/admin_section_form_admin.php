@@ -1,7 +1,5 @@
 <?php
 
-
-
 for($o =0; $o<count($liste_projet_admin_id); $o++){
    $mot_d_origine1 = '';
   $mot_d_origine2 = '';
