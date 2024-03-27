@@ -215,28 +215,7 @@ if(count( $liste_projet_admin_id_sha1) !=0){
 
 }
  
-
-
-
-
-
-
-
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   $list_array_class = array(
     "container p-5 my-5 border",
     "container p-5 my-5 bg-dark text-white",
