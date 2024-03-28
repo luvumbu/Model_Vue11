@@ -206,4 +206,30 @@
    
   }
 }
+
+
+@font-face {
+  font-family: "CaviarDreams";
+  src: url("../src/font/CaviarDreams.ttf");
+}
+@font-face {
+  font-family: "CaviarDreams_Bold";
+  src: url("../src/font/CaviarDreams_Bold.ttf");
+}
+
+@font-face {
+  font-family: "Louis George Cafe";
+  src: url("../src/font/Louis George Cafe.ttf");
+}
+
+
+h1{
+  font-family: "CaviarDreams_Bold";
+
+}
+body{
+  font-family: "CaviarDreams";
+
+
+}
 </style>
