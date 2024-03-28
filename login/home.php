@@ -279,7 +279,7 @@ echo ' </li>';
 //var_dump($liste_projet_admin_name1_iteration_0);
  
   
-
+echo "<div class='iterationimg_all_0'> ";
 echo "<div style='margin-bottom:150px'></div>";
 
 
@@ -335,6 +335,10 @@ echo "<div style='margin-bottom:150px'></div>";
     $iteration2_x = $liste_projet_admin_id_sha1_iteration_1[$iteration_1x];
     include ("iteration/iteration2.php");
   }
+
+
+echo "</div> ";
+
   ?>
 
 </body>
@@ -395,9 +399,14 @@ h1{
 body{
   font-family: "CaviarDreams";
 
-
+background-color: #e5e5dc;
 }
-
+.iterationimg_all_0{
+  background-color: white;
+  width: 90%;
+  margin: auto;
+  border-radius:15px ;
+}
 
 </style>
 
@@ -407,3 +416,4 @@ body{
 <a href="../index.php">
   <img width="50" height="50" src="https://img.icons8.com/cotton/50/home--v3.png" alt="home--v3"/>
 </a>
+
