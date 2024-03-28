@@ -97,17 +97,7 @@ for($o =0; $o<count($liste_projet_admin_id); $o++){
           <div class="fw-bold"> <textarea    style="width:500px" onkeyup="liste_projet_admin_onkeyup(this)" id="<?php echo "b_".$liste_projet_admin_id_sha1[$o] ?>"  title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" type="text" name="" id="" cols="30" rows="10"><?php echo $mot_d_origine2 ?></textarea>
           <?php
 
-if($liste_projet_admin_new_file[$o]!=""){
-
  
- 
-?>
- <a href="add_picture/<?php echo $liste_projet_admin_new_file[$o] ?>">
-  <img class="max_width_img" src="add_picture/<?php echo $liste_projet_admin_new_file[$o] ?>" alt="" srcset="">
- </a>
-
-<?php
-}
             
          }
         ?>

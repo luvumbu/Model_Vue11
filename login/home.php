@@ -122,6 +122,191 @@
 
 
 
+  //
+
+  $apple_iteration_0 = new Select_datas($servername, $username, $password, $dbname);
+  array_push(
+    $apple_iteration_0->row,
+    'liste_projet_admin_id',
+    'liste_projet_admin_id_sha1',
+    'liste_projet_admin_id_parent',
+    'liste_projet_admin_id_sha1_general',
+    'liste_projet_admin_ip',
+    'liste_projet_admin_img',
+    'liste_projet_admin_name1',
+    'liste_projet_admin_name2',
+    'liste_projet_admin_name1_ascii',
+    'liste_projet_admin_name2_ascii',
+    'liste_projet_admin_name3',
+    'liste_projet_admin_name4',
+    'liste_projet_admin_name_tittle1',
+    'liste_projet_admin_name_tittle2',
+    'liste_projet_admin_name_tittle1_ascii',
+    'liste_projet_admin_name_tittle2_ascii',
+    'liste_projet_admin_name_tittle3',
+    'liste_projet_admin_name_tittle4',
+    'liste_projet_admin_new_file'
+
+  );
+
+  $apple_iteration_0->sql = 'SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1_general`!="remove" AND `liste_projet_admin_id_parent` ="' . $liste_projet_admin_id_sha1_iteration_1[0]. '" ';
+  $apple_iteration_0->execution();
+
+  $number_iteration_0 = 0;
+  // affectation valeur array 
+  // execution et ajout des element dans la nouvelle table   
+  $liste_projet_admin_id_iteration_0 = $apple_iteration_0->add_array_element($number_iteration_0);
+  $number_iteration_0++;
+
+  $liste_projet_admin_id_sha1_iteration_0 = $apple_iteration_0->add_array_element($number_iteration_0);
+  $number_iteration_0++;
+
+  $liste_projet_admin_id_parent_iteration_0 = $apple_iteration_0->add_array_element($number_iteration_0);
+  $number_iteration_0++;
+
+  $liste_projet_admin_id_sha1_general_iteration_0 = $apple_iteration_0->add_array_element($number_iteration_0);
+  $number_iteration_0++;
+
+  $liste_projet_admin_ip_iteration_0 = $apple_iteration_0->add_array_element($number_iteration_0);
+  $number_iteration_0++;
+
+  $liste_projet_admin_img_iteration_0 = $apple_iteration_0->add_array_element($number_iteration_0);
+  $number_iteration_0++;
+
+  $liste_projet_admin_name1_iteration_0 = $apple_iteration_0->add_array_element($number_iteration_0);
+  $number_iteration_0++;
+
+  $liste_projet_admin_name2_iteration_0 = $apple_iteration_0->add_array_element($number_iteration_0);
+  $number_iteration_0++;
+
+  $liste_projet_admin_name1_ascii_iteration_0 = $apple_iteration_0->add_array_element($number_iteration_0);
+  $number_iteration_0++;
+
+  $liste_projet_admin_name2_ascii_iteration_0 = $apple_iteration_0->add_array_element($number_iteration_0);
+  $number_iteration_0++;
+
+  $liste_projet_admin_name3_iteration_0 = $apple_iteration_0->add_array_element($number_iteration_0);
+  $number_iteration_0++;
+
+  $liste_projet_admin_name4_iteration_0 = $apple_iteration_0->add_array_element($number_iteration_0);
+  $number_iteration_0++;
+
+  $liste_projet_admin_name_tittle1_iteration_0 = $apple_iteration_0->add_array_element($number_iteration_0);
+  $number_iteration_0++;
+
+  $liste_projet_admin_name_tittle2_iteration_0 = $apple_iteration_0->add_array_element($number_iteration_0);
+  $number_iteration_0++;
+
+  $liste_projet_admin_name_tittle1_ascii_iteration_0 = $apple_iteration_0->add_array_element($number_iteration_0);
+  $number_iteration_0++;
+
+  $liste_projet_admin_name_tittle2_ascii_iteration_0 = $apple_iteration_0->add_array_element($number_iteration_0);
+  $number_iteration_0++;
+
+  $liste_projet_admin_name_tittle3_iteration_0 = $apple_iteration_0->add_array_element($number_iteration_0);
+  $number_iteration_0++;
+  $liste_projet_admin_name_tittle4_iteration_0 = $apple_iteration_0->add_array_element($number_iteration_0);
+  $number_iteration_0++;
+  $liste_projet_admin_new_file_iteration_0 = $apple_iteration_0->add_array_element($number_iteration_0);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+?>
+
+<nav class="navbar navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><?php echo $liste_projet_admin_name1_iteration_1[0] ?></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+        <?php
+ 
+
+ 
+for($x=0;$x<count($liste_projet_admin_name1_iteration_0);$x++){
+echo '<li class="nav-item">';
+echo '<a class="nav-link active" aria-current="page" href="#'.$liste_projet_admin_id_sha1_iteration_0[$x].'">'.$liste_projet_admin_name1_iteration_0[$x].'</a>';
+echo ' </li>';
+ 
+
+}
+ 
+        ?>
+ 
+       <!-- <form class="d-flex mt-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-success" type="submit">Search</button>
+        </form>-->
+      </div>
+    </div>
+  </div>
+</nav>
+<?php
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//var_dump($liste_projet_admin_name1_iteration_0);
+ 
+  
+
+echo "<div style='margin-bottom:150px'></div>";
+
+
+
+
+
 
 
   for ($iteration_1x = 0; $iteration_1x < count($liste_projet_admin_id_sha1_iteration_1); $iteration_1x++) {
@@ -154,7 +339,6 @@
     echo "<h1>" . $mot_d_origine1 . "</h1>";
     echo "<p>" . $mot_d_origine2 . "</p>";
     echo '</div>';
-
 
 
     if ($liste_projet_admin_new_file_iteration_1[$iteration_1x] != "") {
@@ -232,4 +416,13 @@ body{
 
 
 }
+
+
 </style>
+
+
+
+
+<a href="../index.php">
+  <img width="50" height="50" src="https://img.icons8.com/cotton/50/home--v3.png" alt="home--v3"/>
+</a>
