@@ -1,15 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
-<head>
-  <title>Bootstrap 5 Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</head>
-
-<body>
 
 
 
@@ -114,15 +105,24 @@
 
 
 
+?>
+<head>
+  <title><?php echo $liste_projet_admin_name1_iteration_1[0] ?></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+
+<?php
 
 
 
 
-
-
-
-
-  //
+  //  partie pour le menu 
 
   $apple_iteration_0 = new Select_datas($servername, $username, $password, $dbname);
   array_push(
@@ -210,28 +210,6 @@
   $liste_projet_admin_new_file_iteration_0 = $apple_iteration_0->add_array_element($number_iteration_0);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>
 
 <nav class="navbar navbar-dark bg-dark fixed-top">
@@ -272,6 +250,7 @@ echo ' </li>';
 </nav>
 <?php
 
+  //  partie pour le menu 
 
 
 
@@ -368,6 +347,8 @@ echo "<div style='margin-bottom:150px'></div>";
  
   margin-top:100px; 
   margin-bottom:100px; 
+  border-radius: 10px;
+
   }
   .iterationimg_all{
     width: 80% ; 
