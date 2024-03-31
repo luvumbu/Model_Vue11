@@ -103,7 +103,9 @@
     Ajax("admin_section_1", "all_element.php");
   }
   function all_element_admin() {
-   Ajax("admin_section_1", "all_element_admin.php");
+    console.log("o2k");
+    Ajax("admin_section_1", "class/php/admin_section_1_1.php"); 
+
   }
   function home() {
     location.reload();
