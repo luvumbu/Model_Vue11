@@ -1,5 +1,5 @@
 <?php  
-session_start() ;  
+    session_start() ;  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,35 +25,15 @@ if(isset($_SESSION["information_user_login"])) {
 else {  
   include("home_page.html") ; 
 }
-//include("test.php") ; 
-
 ?>
 
 
  <style>
-  .cursor_pointer:hover{
-    cursor: pointer;
-  }
-
-
   input,textarea{
-    border: ;
-    margin-top:25px ;margin-bottom: 25px;
-    padding: 5px;
-    border-radius: 5px;
-    border:1px solid rgba(0,0,0,0.1) ; 
-
+    color: black;   
+   
   }
- 
-
-
-
-
-
-
-
  </style>
-
 
 </body>
 </html>

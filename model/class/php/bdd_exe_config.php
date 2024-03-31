@@ -326,6 +326,8 @@ $execution_formulaire_php->set_action("CREATE TABLE liste_projet_admin (
  
  
 
+  liste_projet_admin_display  VARCHAR(200) NOT NULL,  
+
   liste_projet_date   DATE NOT NULL,
   liste_projet_last_update   DATE NOT NULL,
 

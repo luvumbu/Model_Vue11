@@ -2,12 +2,9 @@
 
 session_start();
 header("Access-Control-Allow-Origin: *");
-
 include("Select_datas.php");
-
 $eman = "";
 $name = "";
-
 
 
 for ($i = strlen($_SERVER['PHP_SELF']) - 1; $i > -1; $i--) {

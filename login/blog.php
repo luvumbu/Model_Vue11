@@ -22,37 +22,19 @@ include("path_class.php") ;
  
  
 <?php 
-
-
-
-
-
 $apple2 = new Select_datas($servername,$username,$password,$dbname);
-
 array_push(
   $apple2->row,
 
   'liste_projet_admin_id_sha1',
   'liste_projet_admin_name1',
   'liste_projet_admin_name2'  
-
- 
-
   );
 
  
   $apple2->sql='SELECT * FROM `liste_projet_admin` WHERE  `liste_projet_admin_id_parent`="" AND `liste_projet_admin_id_sha1_general`!="remove"';
   $apple2->execution();
-  $myJSON = json_encode($apple2->list_row);     
-
- 
-
-
-
-
-
-
-
+  $myJSON = json_encode($apple2->list_row); 
     $number = 0 ; 
    // affectation valeur array 
    // execution et ajout des element dans la nouvelle table 
@@ -62,9 +44,7 @@ array_push(
    $liste_projet_admin_name1=$apple2->add_array_element($number);
    $number ++ ; 
    $liste_projet_admin_name2=$apple2->add_array_element($number);
-   $number ++ ; 
-
- 
+   $number ++ ;  
 
 
 

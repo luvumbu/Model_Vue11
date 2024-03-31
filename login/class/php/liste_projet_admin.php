@@ -65,4 +65,15 @@
 
    $number ++ ; 
    $liste_projet_admin_name2_ascii=$apple->add_array_element($number);
+
+   $number ++ ; 
+   $liste_projet_admin_display=$apple->add_array_element($number);
+
+
+
+
+
+
+
+   
    ?>

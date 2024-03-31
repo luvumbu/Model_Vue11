@@ -5,8 +5,5 @@ function verif_file_name($filename)
         header('Location:../');
         exit();
     }
-    else {
-        
-    }
 }
 ?>

@@ -1,23 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-
-
-
-
-
-
-
-
   <?php
   include ("../model/class/php/connexion.php");
   include ("../model/class/php/Select_datas.php");
   include ("../model/class/php/Insertion_Bdd.php");
   include ("../model/class/php/give_url.php");
+  include ("../model/class/php/Get_anne.php");
 
-
-
-
+  
   $apple_iteration_1 = new Select_datas($servername, $username, $password, $dbname);
   array_push(
     $apple_iteration_1->row,
@@ -39,7 +29,8 @@
     'liste_projet_admin_name_tittle2_ascii',
     'liste_projet_admin_name_tittle3',
     'liste_projet_admin_name_tittle4',
-    'liste_projet_admin_new_file'
+    'liste_projet_admin_new_file',
+    'liste_projet_reg_date'
 
   );
 
@@ -103,7 +94,10 @@
   $number_iteration_1++;
   $liste_projet_admin_new_file_iteration_1 = $apple_iteration_1->add_array_element($number_iteration_1);
 
+  $number_iteration_1++;
+  $liste_projet_reg_date_iteration_1 = $apple_iteration_1->add_array_element($number_iteration_1);
 
+  
 
 ?>
 <head>
@@ -119,7 +113,7 @@
 
 <?php
 
-
+ 
 
 
   //  partie pour le menu 
@@ -228,9 +222,10 @@
 
         <?php
  
-
+ 
  
 for($x=0;$x<count($liste_projet_admin_name1_iteration_0);$x++){
+
 echo '<li class="nav-item">';
 echo '<a class="nav-link active" aria-current="page" href="#'.$liste_projet_admin_id_sha1_iteration_0[$x].'">'.$liste_projet_admin_name1_iteration_0[$x].'</a>';
 echo ' </li>';
@@ -251,100 +246,60 @@ echo ' </li>';
 <?php
 
   //  partie pour le menu 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//var_dump($liste_projet_admin_name1_iteration_0);
- 
-  
+//var_dump($liste_projet_admin_name1_iteration_0); 
 echo "<div class='iterationimg_all_0'> ";
 echo "<div style='margin-bottom:150px'></div>";
-
-
-
-
-
-
-
   for ($iteration_1x = 0; $iteration_1x < count($liste_projet_admin_id_sha1_iteration_1); $iteration_1x++) {
-
-
-
-
     $mot_d_origine1 = '';
     $ascii_codes = explode(' ', trim($liste_projet_admin_name1_ascii_iteration_1[$iteration_1x]));
     foreach ($ascii_codes as $ascii_code) {
       $mot_d_origine1 .= chr($ascii_code);
     }
-
-
     $mot_d_origine2 = '';
     $ascii_codes = explode(' ', trim($liste_projet_admin_name2_ascii_iteration_1[$iteration_1x]));
     foreach ($ascii_codes as $ascii_code) {
       $mot_d_origine2 .= chr($ascii_code);
     }
-
-
-
-
-
-
-
-
-
     echo '<div class="iteration1_0 iterationimg_all">';
     echo "<h1>" . $mot_d_origine1 . "</h1>";
     echo "<p>" . $mot_d_origine2 . "</p>";
+   
     echo '</div>';
-
-
     if ($liste_projet_admin_new_file_iteration_1[$iteration_1x] != "") {
       echo '<div class="iteration1_0_img iterationimg_all">';
       ?>
-
       <a href="../add_picture/<?php echo $liste_projet_admin_new_file_iteration_1[$iteration_1x] ?>">
         <img src="../add_picture/<?php echo $liste_projet_admin_new_file_iteration_1[$iteration_1x] ?>" alt="" srcset="">
       </a>
-
       <?php
-      echo '</div>';
+
+
+
+ 
+echo "<br>";
+$apple__ = new Get_anne($liste_projet_reg_date_iteration_1[0]);
+echo $apple__->get_jour();
+echo "/" ; 
+echo $apple__->get_mois();
+echo "/" ; 
+echo $apple__->get_anne();
+echo " ".$apple__->get_heure_complet() ; 
+/*
+
+get_anne()
+get_jour()
+
+*/
 
     }
     $iteration2_x = $liste_projet_admin_id_sha1_iteration_1[$iteration_1x];
     include ("iteration/iteration2.php");
   }
-
-
 echo "</div> ";
-
   ?>
 
 </body>
-
 </html>
-
 <style>
   .iterationimg_all img {
     max-width: 250px;

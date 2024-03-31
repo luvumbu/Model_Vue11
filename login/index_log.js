@@ -1,6 +1,4 @@
- 
-
-  function add_admin1(_this) {
+   function add_admin1(_this) {
     _this.style.display="none";
     const ok = new Information("class/php/add_admin1.php"); // création de la classe 
     ok.add("liste_projet_admin_id_parent", _this.title); // ajout d'une deuxieme information denvoi  
@@ -8,7 +6,7 @@
     ok.push(); // envoie l'information au code pkp 
     const myTimeout = setTimeout(liste_projet_admin_add, 250);
     function liste_projet_admin_add() {
-      Ajax("admin_section_1", "class/php/admin_section_1_1.php");
+      Ajax("admin_section_1", "class/php/admin_section_2.php");
     _this.style.display="block";
 
     }
@@ -23,8 +21,6 @@
     console.log(ok.info()); // demande l'information dans le tableau
     ok.push(); // envoie l'information au code pkp 
   }
-
-
   function liste_projet_admin_add2(_this) {
     _this.style.display="none";
 
@@ -49,13 +45,33 @@
     ok.push(); // envoie l'information au code pkp 
     const myTimeout = setTimeout(liste_projet_admin_show, 250);
     function liste_projet_admin_show() {
-      Ajax("admin_section_1", "class/php/admin_section_1_1.php");
+      Ajax("admin_section_1", "class/php/admin_section_2.php");
     _this.style.display="block";
 
+    const info_1 = setTimeout(info_1_, 250);
+    }
+
+
+    function info_1_(){
+      const key = document.getElementById("liste_projet_admin_show").innerHTML ; 
+
+      switch (key) {
+        case "":
+          
+          break;
+          case "":
+          
+          break;
+          case "":
+          
+          break;
+      
+        default:
+          break;
+      }
+       
     }
   }
-
-
   function liste_projet_admin_remove(_this) {
     _this.style.display="none";
 
@@ -89,12 +105,9 @@
   function all_element_admin() {
    Ajax("admin_section_1", "all_element_admin.php");
   }
-
-
   function home() {
     location.reload();
   }
-
   function disconnect() {
     Ajax("admin_section_1", "class/php/disconnect.php");
 
@@ -106,5 +119,13 @@
     }
   }
 
-  Ajax("admin_section_1", "class/php/admin_section_1.php");
- 
+
+
+  function admin_section_2_display(_this){    
+  const liste_projet_admin_display =    _this.title; 
+  const ok = new Information("class/php/update/liste_projet_admin_display.php"); // création de la classe 
+  ok.add("liste_projet_admin_display", liste_projet_admin_display); // ajout d'une deuxieme information denvoi    
+  console.log(ok.info()); // demande l'information dans le tableau
+  ok.push(); // envoie l'information au code pkp 
+  
+  }

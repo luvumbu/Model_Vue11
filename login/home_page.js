@@ -1,8 +1,6 @@
  
   var information_user_btn_info = 0;
   function information_user_btn(_this) {
-    
-
   const information_user_login = document.getElementById("information_user_login").value ; 
   const information_user_password = document.getElementById("information_user_password").value ; 
  
@@ -66,15 +64,10 @@ else{
   console.log("x") ; 
   const information_user_login = document.getElementById("information_user_login").value ;  
     const ok = new Information("class/php/home_page2.php"); // création de la classe 
-    ok.add("information_user_login", information_user_login); // ajout de l'information pour lenvoi 
-      
-   
+    ok.add("information_user_login", information_user_login); // ajout de l'information pour lenvoi    
      ok.add("_this_title", _this.title); // ajout d'une deuxieme information denvoi  
      console.log(ok.info()); // demande l'information dans le tableau
      ok.push(); // envoie l'information au code pkp 
-   
-    
-
 
      const myTimeout = setTimeout(information_user_btn, 300);
 
@@ -103,7 +96,7 @@ else{
 
 
 
-     const myTimeout = setTimeout(add_picture, 1000);
+     const myTimeout = setTimeout(add_picture, 250);
 
 function add_picture() {
   window.location.replace("add_picture/index.php");

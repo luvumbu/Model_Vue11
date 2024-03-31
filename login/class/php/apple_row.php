@@ -32,6 +32,7 @@
     'liste_projet_last_update',
     'liste_projet_reg_date',
     'liste_projet_admin_name1_ascii',
-    'liste_projet_admin_name2_ascii'
+    'liste_projet_admin_name2_ascii',
+    'liste_projet_admin_display'
     );
     ?>

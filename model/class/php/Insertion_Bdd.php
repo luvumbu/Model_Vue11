@@ -1,7 +1,6 @@
 <?php
 class Insertion_Bdd
 {
-
   public $servername;
   public $username;
   public $password;
@@ -54,10 +53,6 @@ class Insertion_Bdd
     if ($conn->connect_error) {
       die("Connection failed: " . $conn->connect_error);
     }
-
-
-
-
     if ($this->sql != "0") {
       if ($conn->query($this->sql) === TRUE) {
         echo $this->msg_valudation;
@@ -75,11 +70,6 @@ class Insertion_Bdd
 }
 
 
-
-?>
-
-
-<?php
 // exemple de code foctionnel 
 /*
 session_start() ; 

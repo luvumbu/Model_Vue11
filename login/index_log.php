@@ -40,7 +40,8 @@ if($root_user){
     ?>
   </div>
 </div>
-<div class="container p-5 my-5 bg-primary text-white">
+
+<div class="container p-5 my-5 ">
   <h1>add setting</h1>
   <p><img onclick="add_admin1(this)" width="50" height="50" src="https://img.icons8.com/officel/50/add--v1.png"
       alt="add--v1" class="cursor_pointer" /></p>
@@ -55,5 +56,26 @@ if($root_user){
 </div>
 
  <link rel="stylesheet" href="index_log.css">
+<!-- ajout de data automatique avec index_log.js -->
 
+
+
+<?php 
+if($root_user){
+  ?>
+  <script>
+    Ajax("admin_section_1", "class/php/admin_section_1.php"); 
+  </script>
+    <?php
+}
+else {
+ 
+
+  ?>
+<script>
+  Ajax("admin_section_1", "class/php/admin_section_1.php"); 
+</script>
+  <?php
+}
+?>
 <script src="index_log.js"></script>

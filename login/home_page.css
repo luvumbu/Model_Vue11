@@ -80,7 +80,11 @@
     width: 50%; 
     margin: auto;
   }
-  .none_1 {hh
+  .none_1 { 
     display: none;
   }
+  input,textarea{
  
+    color:white;
+    font-size:2em ;
+  }

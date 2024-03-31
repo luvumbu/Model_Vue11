@@ -94,22 +94,9 @@ var_dump($b) ;
   }
   function all_data_json(){
     $a=array();
-
- 
-
-    
- 
-
-    for($i = 0 ; $i<count($this->list_row) ; $i++){
-     
+    for($i = 0 ; $i<count($this->list_row) ; $i++){     
       array_push($a,$this->list_row[$i]);
     }
-    
-
-
-
-
-
  
 if(count($this->list_row)>0){
 
