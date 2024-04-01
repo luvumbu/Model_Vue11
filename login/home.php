@@ -37,6 +37,15 @@
   $apple_iteration_1->sql = 'SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1_general`!="remove" AND `liste_projet_admin_id_sha1` ="' . give_url() . '" ';
   $apple_iteration_1->execution();
 
+
+
+
+
+
+
+  if( count(  $apple_iteration_1->list_row)>0){
+
+
   $number_iteration_1 = 0;
   // affectation valeur array 
   // execution et ajout des element dans la nouvelle table   
@@ -372,3 +381,21 @@ background-color: #e5e5dc;
   <img width="50" height="50" src="https://img.icons8.com/cotton/50/home--v3.png" alt="home--v3"/>
 </a>
 
+<?php
+
+}
+
+else{
+  ?>
+<img  src="https://img.freepik.com/vecteurs-libre/oops-erreur-404-illustration-concept-robot-casse_114360-5529.jpg" alt="">
+
+
+<style>
+  img{
+    width: 50%; 
+    margin:auto ;  
+  }
+</style>
+  <?php
+}
+?>
