@@ -14,10 +14,21 @@ $image_src_1 = "https://img.icons8.com/fluency/50/crown.png"; // couronne
 $image_src_2 = "https://img.icons8.com/ios/50/home--v1.png";
 $image_src_3 = "https://img.icons8.com/color/50/all.png";
 $image_src_4 = "https://img.icons8.com/color/48/disconnect-main-plug.png";
-
 $image_src_5 = "https://img.icons8.com/matisse/48/remove--v2.png";
+$image_src_6 = "https://img.icons8.com/officel/50/add--v1.png";
+
 
  
+$text_src_2 = "Home";
+$text_src_3 = "Tous les elements";
+$text_src_4 = "Déconnection";
+$text_src_5 = "Home";
+
+$text_src_6 = "Parametres";
+
+
+
+
 
 
 ?>
@@ -33,13 +44,14 @@ $image_src_5 = "https://img.icons8.com/matisse/48/remove--v2.png";
   ?>
   <div class="row">
     <div class="col-sm-4" onclick="home()">
-      <h3>home</h3>
+      <h3><?php echo $text_src_2 ?></h3>
       <?php
             echo '<img class="' . $img_class_all . '" width="' . $image_width_all . '" height="' . $image_height_all . '" src="' . $image_src_2 . '" alt="crown"/>';
       ?>
     </div>
     <div class="col-sm-4" onclick="all_element()">
-      <h3>All element</h3>
+    <h3><?php echo $text_src_3 ?></h3>
+
       <?php 
     echo '<img class="' . $img_class_all . '" width="' . $image_width_all . '" height="' . $image_height_all . '" src="' . $image_src_3 . '" alt="crown"/>';
       
@@ -47,7 +59,8 @@ $image_src_5 = "https://img.icons8.com/matisse/48/remove--v2.png";
 
     </div>
     <div class="col-sm-4" onclick="disconnect()">
-      <h3>Déconnection</h3>
+    <h3><?php echo $text_src_4 ?></h3>
+
       <?php 
     echo '<img class="' . $img_class_all . '" width="' . $image_width_all . '" height="' . $image_height_all . '" src="' . $image_src_4 . '" alt="crown"/>';
       
@@ -72,9 +85,17 @@ $image_src_5 = "https://img.icons8.com/matisse/48/remove--v2.png";
 </div>
 
 <div class="container p-5 my-5 ">
-  <h1>add setting</h1>
-  <p><img onclick="add_admin1(this)" width="50" height="50" src="https://img.icons8.com/officel/50/add--v1.png"
-      alt="add--v1" class="cursor_pointer" /></p>
+<h3><?php echo $text_src_6 ?></h3>
+
+  <p>
+ 
+      <?php 
+    echo '<img class="' . $img_class_all . '" width="' . $image_width_all . '" height="' . $image_height_all . '" src="' . $image_src_6 . '" onclick="add_admin1(this)" alt="crown"/>';
+      
+      ?>
+    
+    
+    </p>
 </div>
 <div class="container p-5 my-5 bg-dark text-white">
   <ol class="list-group list-group-numbered">
