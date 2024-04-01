@@ -94,7 +94,8 @@
     ok.push(); // envoie l'information au code pkp 
     const myTimeout = setTimeout(liste_projet_admin_remove, 250);
     function liste_projet_admin_remove() {
-      Ajax("admin_section_1", "all_element.php");
+      Ajax("admin_section_1", "class/php/admin_section_1_1.php"); 
+
 
      }
   }
