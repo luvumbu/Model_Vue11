@@ -99,11 +99,30 @@
      }
   }
 
+  function liste_projet_admin_annuler(_this) {
+
+   
+    
+    _this.style.display="none";
+
+    const ok = new Information("class/php/cookie/liste_projet_admin_annuler.php"); // création de la classe 
+    ok.add("liste_projet_admin_id_sha1", _this.title); // ajout d'une deuxieme information denvoi 
+    console.log(ok.info()); // demande l'information dans le tableau
+    ok.push(); // envoie l'information au code pkp 
+    const myTimeout = setTimeout(liste_projet_admin_annuler, 250);
+    function liste_projet_admin_annuler() {
+      
+      Ajax("admin_section_1", "class/php/admin_section_1_1.php"); 
+
+     }
+    
+  }
+
   function all_element() {
     Ajax("admin_section_1", "all_element.php");
   }
   function all_element_admin() {
-    console.log("o2k");
+ 
     Ajax("admin_section_1", "class/php/admin_section_1_1.php"); 
 
   }

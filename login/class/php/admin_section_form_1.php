@@ -1,5 +1,5 @@
 <?php
-  
+ 
 if(isset($_SESSION["information_user_login"])){
  
   }
@@ -67,21 +67,16 @@ for($o =0; $o<count($liste_projet_admin_id); $o++){
  </a>
  <?php
         }
-    if($information_user_id_sha1_0!=$information_user_id_sha1_1){
-
  
-  
-         }
-         else {
+      
    
           ?>
-         <div class="fw-bold"><input  class="<?php echo $liste_projet_admin_id_sha1_general[$o] ?>" style="width:500px;" onkeyup="liste_projet_admin_onkeyup(this)" id="<?php echo "a_".$liste_projet_admin_id_sha1[$o] ?>"  title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" type="text" value="<?php echo $mot_d_origine1 ?>"></div>
-          <div class="fw-bold"> <textarea   class="<?php echo $liste_projet_admin_id_sha1_general[$o] ?>"    style="width:500px" onkeyup="liste_projet_admin_onkeyup(this)" id="<?php echo "b_".$liste_projet_admin_id_sha1[$o] ?>"  title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" type="text" name="" id="" cols="30" rows="10"><?php echo $mot_d_origine2 ?></textarea>
+          <div class="fw-bold"><input  class="<?php echo $liste_projet_admin_id_sha1_general[$o] ?> " style="width:500px;" onkeyup="liste_projet_admin_onkeyup(this)" id="<?php echo "a_".$liste_projet_admin_id_sha1[$o] ?>"  title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" type="text" value="<?php echo $mot_d_origine1 ?>"></div>
+          <div class="fw-bold"> <textarea class="<?php echo $liste_projet_admin_id_sha1_general[$o] ?> "   style="width:500px" onkeyup="liste_projet_admin_onkeyup(this)" id="<?php echo "b_".$liste_projet_admin_id_sha1[$o] ?>"  title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" type="text" name="" id="" cols="30" rows="10"><?php echo $mot_d_origine2 ?></textarea>
           <?php
 
  
-            
-         }
+  
         ?>
          
         </div>
@@ -89,7 +84,7 @@ for($o =0; $o<count($liste_projet_admin_id); $o++){
         
 
 <?php 
-if($information_user_id_sha1_0==$information_user_id_sha1_1){
+ 
 
 
   
@@ -100,19 +95,13 @@ if($information_user_id_sha1_0==$information_user_id_sha1_1){
 </div>
  
 <img width="50" onclick="add_picture(this)" title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" class="cursor_pointer" height="50" src="https://img.icons8.com/office/50/picture.png" alt="picture"/>
-<img  onclick="liste_projet_admin_remove(this)" width="50" title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" width="50" class="cursor_pointer" height="50" src="https://img.icons8.com/ios/50/delete-forever--v1.png" alt="delete-forever--v1"/>
+<img  onclick="liste_projet_admin_annuler(this)" width="50" title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" width="50" class="cursor_pointer" height="50" src="https://img.icons8.com/ios/50/undo.png" alt="delete-forever--v1"/>
  
 <img class="cursor_pointer" title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" onclick="liste_projet_admin_show(this)" width="50" height="50" src="https://img.icons8.com/ios-filled/50/gear.png" alt="gear"/>
 <a href="home.php/<?php echo $liste_projet_admin_id_sha1[$o] ?>">
     <img   width="50" title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" width="50" class="cursor_pointer" height="50" src="https://img.icons8.com/ios/50/link--v1.png" alt="delete-forever--v1"/>
 </a>    
-<?php
-}
  
-
-
-
-?>
 
 
 
@@ -144,8 +133,7 @@ if($information_user_id_sha1_0==$information_user_id_sha1_1){
     border:1px solid rgba(0, 0, 50, 0.1);
   }
   .remove{
-    border:1px solid rgba(0, 0, 50, 0.1);
-    background-color: rgba(140, 0, 0, 0.1);
+    background-color: rgba(150,0,0,0.1);
   }
 </style>
 

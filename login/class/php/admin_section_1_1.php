@@ -7,4 +7,6 @@ $apple->execution();
 $myJSON = json_encode($apple->list_row);
 include ("liste_projet_admin.php");
 include ("admin_section_form_1.php");
+
+ 
 ?>
