@@ -6,7 +6,7 @@ if (!file_exists($filename)) {
     header('Location:../');
     exit();
 }
- 
+
 
 include("../model/class/php/Select_file.php") ; 
 include("../model/class/php/Get_anne.php") ; 

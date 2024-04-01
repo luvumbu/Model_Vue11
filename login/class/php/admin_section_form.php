@@ -1,5 +1,5 @@
 <?php
-
+ 
 if (isset($_SESSION["information_user_login"])) {
 
 } else {
@@ -73,6 +73,8 @@ for ($o = 0; $o < count($liste_projet_admin_id); $o++) {
     <div class="ms-2 me-auto">
         <a href="add_picture/<?php echo $liste_projet_admin_new_file[$o] ?>">
           <img class="max_width_img" src="add_picture/<?php echo $liste_projet_admin_new_file[$o] ?>" alt="" srcset="">
+
+         
         </a>
         <div class="fw-bold"><input style="width:500px;" onkeyup="liste_projet_admin_onkeyup(this)"
             id="<?php echo "a_" . $liste_projet_admin_id_sha1[$o] ?>" title="<?php echo $liste_projet_admin_id_sha1[$o] ?>"
@@ -101,21 +103,43 @@ for ($o = 0; $o < count($liste_projet_admin_id); $o++) {
       <div class="add_visibility">
         <img onclick="add_admin1(this)" width="50" title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" height="50"
           src="https://img.icons8.com/officel/50/add--v1.png" alt="add--v1" class="cursor_pointer" />
+          <p class="text-center">add</p>
       </div>
 
-      <img width="50" onclick="add_picture(this)" title="<?php echo $liste_projet_admin_id_sha1[$o] ?>"
+      <div>
+            <img width="50" onclick="add_picture(this)" title="<?php echo $liste_projet_admin_id_sha1[$o] ?>"
         class="cursor_pointer" height="50" src="https://img.icons8.com/office/50/picture.png" alt="picture" />
-      <img onclick="liste_projet_admin_remove(this)" width="50" title="<?php echo $liste_projet_admin_id_sha1[$o] ?>"
+        <p class="text-center">document</p>
+
+      </div>
+  
+  
+        <div>
+              <img onclick="liste_projet_admin_remove(this)" width="50" title="<?php echo $liste_projet_admin_id_sha1[$o] ?>"
         width="50" class="cursor_pointer" height="50" src="https://img.icons8.com/ios/50/delete-forever--v1.png"
         alt="delete-forever--v1" />
+        <p class="text-center">remove</p>
 
-      <img class="cursor_pointer" title="<?php echo $liste_projet_admin_id_sha1[$o] ?>"
+        </div>
+<div>
+        <img class="cursor_pointer" title="<?php echo $liste_projet_admin_id_sha1[$o] ?>"
         onclick="liste_projet_admin_show(this)" width="50" height="50" src="https://img.icons8.com/ios-filled/50/gear.png"
         alt="gear" />
-      <a href="home.php/<?php echo $liste_projet_admin_id_sha1[$o] ?>">
+        <p class="text-center">
+          settings
+        </p>
+</div>
+
+<div>
+        <a href="home.php/<?php echo $liste_projet_admin_id_sha1[$o] ?>">
         <img width="50" title="<?php echo $liste_projet_admin_id_sha1[$o] ?>" width="50" class="cursor_pointer" height="50"
           src="https://img.icons8.com/ios/50/link--v1.png" alt="delete-forever--v1" />
       </a>
+      <p class="text-center">
+        Link
+      </p>
+</div>
+
       <?php
     }
 

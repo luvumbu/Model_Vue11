@@ -1,6 +1,7 @@
 <?php  
     session_start() ;  
 ?>
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +19,7 @@
 <script src="home_page.js"></script>
 <?php
 include("include_class.php");
+ 
 
 if(isset($_SESSION["information_user_login"])) {  
   include("index_log.php") ; 

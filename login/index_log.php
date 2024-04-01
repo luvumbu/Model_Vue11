@@ -1,13 +1,32 @@
 <?php
 $information_user_login = $_SESSION["information_user_login"];
 $information_user_password = $_SESSION["information_user_password"];
+
+
+ 
+
+$image_width_all = "40";
+$image_height_all = "40";
+$img_class_all = "cursor_pointer";
+
+$image_src_1 = "https://img.icons8.com/fluency/50/crown.png"; // couronne 
+
+$image_src_2 = "https://img.icons8.com/ios/50/home--v1.png";
+$image_src_3 = "https://img.icons8.com/color/50/all.png";
+$image_src_4 = "https://img.icons8.com/color/48/disconnect-main-plug.png";
+
+$image_src_5 = "https://img.icons8.com/matisse/48/remove--v2.png";
+
+ 
+
+
 ?>
 
 <div class="container mt-5 text-center">
   <?php
-$root_user= false;
+  $root_user = false;
   if ($information_user_login == $username && $information_user_password == sha1($password)) {
-    echo '<img width="50" height="50" src="https://img.icons8.com/fluency/50/crown.png" alt="crown"/>';
+    echo '<img class="' . $img_class_all . '" width="' . $image_width_all . '" height="' . $image_height_all . '" src="' . $image_src_1 . '" alt="crown"/>';
     $root_user = true;
   }
 
@@ -15,28 +34,39 @@ $root_user= false;
   <div class="row">
     <div class="col-sm-4" onclick="home()">
       <h3>home</h3>
-
-      <img width="50" height="50" src="https://img.icons8.com/ios/50/home--v1.png" alt="home--v1" />
+      <?php
+            echo '<img class="' . $img_class_all . '" width="' . $image_width_all . '" height="' . $image_height_all . '" src="' . $image_src_2 . '" alt="crown"/>';
+      ?>
     </div>
     <div class="col-sm-4" onclick="all_element()">
       <h3>All element</h3>
-      <img width="50" height="50" src="https://img.icons8.com/color/50/all.png" alt="all" />
+      <?php 
+    echo '<img class="' . $img_class_all . '" width="' . $image_width_all . '" height="' . $image_height_all . '" src="' . $image_src_3 . '" alt="crown"/>';
+      
+      ?>
 
     </div>
     <div class="col-sm-4" onclick="disconnect()">
       <h3>Déconnection</h3>
-      <img width="48" height="48" src="https://img.icons8.com/color/48/disconnect-main-plug.png"
-        alt="disconnect-main-plug" />
+      <?php 
+    echo '<img class="' . $img_class_all . '" width="' . $image_width_all . '" height="' . $image_height_all . '" src="' . $image_src_4 . '" alt="crown"/>';
+      
+      ?>
+
+
     </div>
     <?php
-if($root_user){
-  ?>
-    <div class="col-sm-4" style="margin-top:100px" onclick="all_element_admin()">
-      <h3>Element suprimée</h3>
-      <img width="48" height="48" src="https://img.icons8.com/matisse/48/remove--v2.png" alt="remove--v2"/>
-    </div>
-  <?php
-}
+    if ($root_user) {
+      ?>
+      <div class="col-sm-4" style="margin-top:100px" onclick="all_element_admin()">
+        <h3>Element suprimée</h3>
+        <?php 
+    echo '<img class="' . $img_class_all . '" width="' . $image_width_all . '" height="' . $image_height_all . '" src="' . $image_src_5 . '" alt="crown"/>';
+      
+      ?>
+      </div>
+      <?php
+    }
     ?>
   </div>
 </div>
@@ -55,26 +85,25 @@ if($root_user){
   </ol>
 </div>
 
- <link rel="stylesheet" href="index_log.css">
+<link rel="stylesheet" href="index_log.css">
 <!-- ajout de data automatique avec index_log.js -->
 
 
 
-<?php 
-if($root_user){
+<?php
+if ($root_user) {
   ?>
   <script>
     Ajax("admin_section_1", "class/php/admin_section_1.php"); 
   </script>
-    <?php
-}
-else {
- 
+  <?php
+} else {
+
 
   ?>
-<script>
-  Ajax("admin_section_1", "class/php/admin_section_1.php"); 
-</script>
+  <script>
+    Ajax("admin_section_1", "class/php/admin_section_1.php"); 
+  </script>
   <?php
 }
 ?>

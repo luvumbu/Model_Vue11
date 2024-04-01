@@ -31,7 +31,10 @@ $myJSON = json_encode($apple->list_row);
 // execution et ajout des element dans la nouvelle table 
 include ("liste_projet_admin.php");
 include ("admin_section_form.php");
-?>
+ 
+
+/*
+ 
 <div id="liste_projet_admin_show"><?php echo $liste_projet_admin_display_parent[0] ; ?></div>
 <ol class="list-group list-group-numbered" style="margin-top:70px">
   <li class="list-group-item d-flex justify-content-between align-items-start">
@@ -96,4 +99,5 @@ include ("admin_section_form.php");
     </div>
 </ol>
 
- 
+ */
+?>

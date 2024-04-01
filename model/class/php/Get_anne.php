@@ -84,7 +84,7 @@ class Get_anne
 }
  
 $apple = new Get_anne("2023-12-24 06:04:58");
-echo $apple-> get_secondes();
+ 
  
 
  
