@@ -1,3 +1,7 @@
+const image_1 ="https://img.icons8.com/ios/60/invisible.png" ;  
+const image_2 ="https://img.icons8.com/windows/60/invisible.png" ; 
+
+
    function add_admin1(_this) {
     _this.style.display="none";
     const ok = new Information("class/php/add_admin1.php"); // création de la classe 
@@ -165,4 +169,43 @@
   console.log(ok.info()); // demande l'information dans le tableau
   ok.push(); // envoie l'information au code pkp 
   
+  }
+
+
+  function visibilite(_this){
+    
+
+/*
+    const image_1 ="https://img.icons8.com/ios/60/invisible.png" ;  
+    const image_2 ="https://img.icons8.com/windows/60/invisible.png" ; 
+
+
+ */   
+    const liste_projet_admin_visibilite1 =  _this.className ; 
+    const liste_projet_admin_id_sha1 =   _this.title  ; 
+
+   if(_this.className=="(0-0)"){
+     _this.className="" ; 
+     _this.src=image_2 ; 
+
+   }
+   else {
+    _this.src=image_1 ; 
+    _this.className="(0-0)" ; 
+
+
+   }
+
+    const ok = new Information("class/php/update/visibilite.php"); // création de la classe 
+    ok.add("liste_projet_admin_visibilite1", liste_projet_admin_visibilite1); // ajout d'une deuxieme information denvoi    
+    ok.add("liste_projet_admin_id_sha1", liste_projet_admin_id_sha1); // ajout d'une deuxieme information denvoi    
+
+
+    
+
+    console.log(ok.info()); // demande l'information dans le tableau
+    ok.push(); // envoie l'information au code pkp 
+
+
+
   }

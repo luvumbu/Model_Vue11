@@ -114,6 +114,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+ 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
@@ -278,7 +280,9 @@ echo "<div style='margin-bottom:150px'></div>";
       echo '<div class="iteration1_0_img iterationimg_all">';
       ?>
       <a href="../add_picture/<?php echo $liste_projet_admin_new_file_iteration_1[$iteration_1x] ?>">
-        <img src="../add_picture/<?php echo $liste_projet_admin_new_file_iteration_1[$iteration_1x] ?>" alt="" srcset="">
+
+      
+        <img    class="src_img_1" src="../add_picture/<?php echo $liste_projet_admin_new_file_iteration_1[$iteration_1x] ?>" alt="" srcset="">
       </a>
       <?php
 
@@ -310,31 +314,26 @@ echo "</div> ";
 </body>
 </html>
 <style>
-  .iterationimg_all img {
-    max-width: 250px;
- 
-  margin-top:100px; 
-  margin-bottom:100px; 
-  border-radius: 10px;
 
+ 
+  .iterationimg_all img {
+   
   }
   .iterationimg_all{
-    width: 80% ; 
-   
-    margin: auto;   text-align: center;
+ 
   }
   .iterationimg_all p {
-    text-align: justify;
+ 
   }
   .iterationimg_all p, .iterationimg_all h1 {
-  padding: 15px;
+ 
   }
 
 
 
   @media screen and (max-width: 1200px) {
     .iterationimg_all{
-    width: 90% ; 
+     
    
    
   }
@@ -357,24 +356,45 @@ echo "</div> ";
 
 
 h1{
-  font-family: "CaviarDreams_Bold";
+   
+  
+
 
 }
 body{
-  font-family: "CaviarDreams";
+ 
 
-background-color: #e5e5dc;
+ 
 }
 .iterationimg_all_0{
-  background-color: white;
-  width: 90%;
-  margin: auto;
-  border-radius:15px ;
+ 
+}
+.src_img_1{
+ 
 }
 
+ 
+
+
+
+@font-face {
+  font-family: "asciid.[fontvir.us]";
+  src: url("../src/font/asciid.[fontvir.us].ttf");
+}
+
+.iterationimg_all_0{
+ 
+  text-align:center ; 
+  margin-top:50px; 
+  padding:15px; 
+  font-family: "asciid.[fontvir.us]";
+
+
+
+}
 </style>
 
-
+ 
 
 
 <a href="../index.php">
@@ -392,6 +412,8 @@ else{
 
 <style>
   img{
+
+ 
     width: 50%; 
     margin:auto ;  
   }

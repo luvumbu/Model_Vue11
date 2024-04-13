@@ -82,7 +82,56 @@ for ($o = 0; $o < count($liste_projet_admin_id); $o++) {
         <div class="fw-bold"> <textarea style="width:500px" onkeyup="liste_projet_admin_onkeyup(this)"
             id="<?php echo "b_" . $liste_projet_admin_id_sha1[$o] ?>" title="<?php echo $liste_projet_admin_id_sha1[$o] ?>"
             type="text" name="" id="" cols="30" rows="10"><?php echo $mot_d_origine2 ?></textarea>
+
+            <div class="mot_d_origine2">
+            <?php echo $mot_d_origine2 ?>
+            </div>
+
+<div>
+
+
+<?php
+if( $liste_projet_admin_visibilite1[$o]==""){
+?>
+     
+     <div class="cursor_pointer">
+          <img  class="(0-0)" title="<?php echo  $liste_projet_admin_id_sha1[$o] ?>" width="60" height="60" src="https://img.icons8.com/ios/60/invisible.png" alt="invisible" onclick="visibilite(this)"/>
+
+     </div>
+     <p>
+  rendre visible
+</p>
+
+<?php 
+}
+else {
+  ?>
+  <div class="cursor_pointer">
+  <img  class="" title="<?php echo  $liste_projet_admin_id_sha1[$o] ?>"  width="60" height="60" src="https://img.icons8.com/windows/60/invisible.png" alt="invisible" onclick="visibilite(this)"/>
+
+  </div>
+
+  <p>
+  rendre invisible
+</p>
+  <?php 
+}
+?>
+
+
+
+       <!--<img width="60" height="60" src="https://img.icons8.com/windows/60/invisible.png" alt="invisible" onclick="visibilite(this)"/>
+        <p>
+          Visible
+        </p>
+            <img width="60" height="60" src="https://img.icons8.com/ios/60/invisible.png" alt="invisible"/>
+            <p>
+          Visible
+        </p>-->
+</div>
+      
           <?php
+
 
 
 
