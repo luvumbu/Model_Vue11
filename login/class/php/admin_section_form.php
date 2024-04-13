@@ -100,8 +100,8 @@ if( $liste_projet_admin_visibilite1[$o]==""){
 
      </div>
      <p>
-  <div id="<?php echo  $liste_projet_admin_id_sha1[$o]."_info_visibilite" ?>">
-         <b class="color_b_1"> visible</b> 
+  <div   id="<?php echo  $liste_projet_admin_id_sha1[$o]."_info_visibilite" ?>">
+         <b class="color_b_1 alert alert-success"> visible </b> 
   </div>
 </p>
 
@@ -114,8 +114,8 @@ else {
 
   </div>
 
-  <div id="<?php echo  $liste_projet_admin_id_sha1[$o]."_info_visibilite" ?>">
-          <b class="color_b_2">invisible</b>
+  <div style="text-align:center" class="cursor_pointer" id="<?php echo  $liste_projet_admin_id_sha1[$o]."_info_visibilite" ?>">
+          <b class="color_b_2 alert alert-danger">invisible</b>
   </div>
   <?php 
 }
