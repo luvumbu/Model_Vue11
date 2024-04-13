@@ -99,7 +99,9 @@ if( $liste_projet_admin_visibilite1[$o]==""){
 
      </div>
      <p>
-  rendre visible
+  <div id="<?php echo  $liste_projet_admin_id_sha1[$o]."_info_visibilite" ?>">
+         rendre <b class="color_b_1"> visible</b> 
+  </div>
 </p>
 
 <?php 
@@ -111,9 +113,9 @@ else {
 
   </div>
 
-  <p>
-  rendre invisible
-</p>
+  <div id="<?php echo  $liste_projet_admin_id_sha1[$o]."_info_visibilite" ?>">
+         rendre  <b class="color_b_2">invisible</b>
+  </div>
   <?php 
 }
 ?>
@@ -223,5 +225,11 @@ else {
 
     margin-left: 10px;
     border: 1px solid rgba(0, 0, 50, 0.1);
+  }
+  .color_b_1{
+    color:green ; 
+  }
+  .color_b_2{
+    color:red ; 
   }
 </style>

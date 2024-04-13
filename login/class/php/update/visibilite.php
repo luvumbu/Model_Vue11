@@ -19,7 +19,7 @@ $liste_projet_admin_id_sha1 = $_POST["liste_projet_admin_id_sha1"] ;
 
 
 
-$liste_projet_admin_id_sha1 =str_replace(" ","",$liste_projet_admin_id_sha1);
+
 
 
  
