@@ -197,3 +197,39 @@ const image_2 ="https://img.icons8.com/windows/60/invisible.png" ;
 
 
   }
+
+
+  function change_name(){
+    Ajax("admin_section_1", "class/php/admin_section_3.php");
+
+  }
+  function information_user() {
+
+    const liste_projet_admin_name1 = document.getElementById("liste_projet_admin_name1").value ; 
+    const liste_projet_admin_name2 = document.getElementById("liste_projet_admin_name2").value ; 
+  
+
+
+
+
+
+
+
+
+    const ok = new Information("class/php/update/information_user.php"); // création de la classe 
+    ok.add("liste_projet_admin_name1", liste_projet_admin_name1); // ajout d'une deuxieme information denvoi  
+    ok.add("liste_projet_admin_name2", liste_projet_admin_name2); // ajout d'une deuxieme information denvoi    
+
+   
+
+
+    
+
+    console.log(ok.info()); // demande l'information dans le tableau
+    ok.push(); // envoie l'information au code pkp 
+
+
+
+
+
+  }

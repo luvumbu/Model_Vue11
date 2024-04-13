@@ -327,9 +327,17 @@ $execution_formulaire_php->set_action("CREATE TABLE liste_projet_admin (
  
 
   liste_projet_admin_display  VARCHAR(200) NOT NULL,  
+  liste_projet_admin_information_user_1 VARCHAR(200) NOT NULL, 
+  liste_projet_admin_information_user_2 VARCHAR(200) NOT NULL, 
+  liste_projet_admin_information_user_3 VARCHAR(200) NOT NULL, 
+  liste_projet_admin_information_user_4 VARCHAR(200) NOT NULL, 
 
   liste_projet_date   DATE NOT NULL,
   liste_projet_last_update   DATE NOT NULL,
+
+
+
+
 
 
   liste_projet_reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP

@@ -16,8 +16,10 @@ $image_src_3 = "https://img.icons8.com/color/50/all.png";
 $image_src_4 = "https://img.icons8.com/color/48/disconnect-main-plug.png";
 $image_src_5 = "https://img.icons8.com/matisse/48/remove--v2.png";
 $image_src_6 = "https://img.icons8.com/officel/50/add--v1.png";
+$image_src_7 = "https://img.icons8.com/cotton/64/name--v2.png";
 
 
+ 
  
 $text_src_2 = "Home";
 $text_src_3 = "Tous les elements";
@@ -25,6 +27,7 @@ $text_src_4 = "Déconnection";
 $text_src_5 = "Home";
 
 $text_src_6 = "Parametres";
+$text_src_7 = "Changer votre nom";
 
 
 
@@ -68,6 +71,18 @@ $text_src_6 = "Parametres";
 
 
     </div>
+
+    <div class="col-sm-4" onclick="change_name()">
+    <h3><?php echo $text_src_7 ?></h3>
+
+      <?php 
+    echo '<img class="' . $img_class_all . '" width="' . $image_width_all . '" height="' . $image_height_all . '" src="' . $image_src_7 . '" alt="crown"/>';
+      
+      ?>
+
+
+    </div>
+    
     <?php
     if ($root_user) {
       ?>

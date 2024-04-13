@@ -308,14 +308,24 @@ echo "<div style='margin-bottom:150px'></div>";
     }
     echo '<div class="iteration1_0 iterationimg_all">';
     echo "<h1>" . $mot_d_origine1 . "</h1>";
-    echo "<p>" . $mot_d_origine2 . "</p>";
+ 
     
 
 
-    if($liste_projet_admin_visibilite1_0[$iteration_1x]!=""){
-      
-    }
-   
+
+    echo '<div class="iteration2_0">' ; 
+ 
+echo "<br>";
+$apple__ = new Get_anne($liste_projet_reg_date_iteration_1[0]);
+echo $apple__->get_jour();
+echo "/" ; 
+echo $apple__->get_mois();
+echo "/" ; 
+echo $apple__->get_anne();
+echo " ".$apple__->get_heure_complet() ; 
+
+echo '</div>' ; 
+     
     echo '</div>';
     if ($liste_projet_admin_new_file_iteration_1[$iteration_1x] != "") {
 
@@ -332,15 +342,7 @@ echo "<div style='margin-bottom:150px'></div>";
 
 
 
- 
-echo "<br>";
-$apple__ = new Get_anne($liste_projet_reg_date_iteration_1[0]);
-echo $apple__->get_jour();
-echo "/" ; 
-echo $apple__->get_mois();
-echo "/" ; 
-echo $apple__->get_anne();
-echo " ".$apple__->get_heure_complet() ; 
+
 /*
 
 get_anne()
@@ -349,6 +351,7 @@ get_jour()
 */
 
     }
+    echo "<p>" . $mot_d_origine2 . "</p>";
     $iteration2_x = $liste_projet_admin_id_sha1_iteration_1[$iteration_1x];
      
  
@@ -361,31 +364,43 @@ echo "</div> ";
 </html>
 <style>
   .iterationimg_all img {
-   max-width: 80%;
- 
-  margin-top:100px; 
-  margin-bottom:100px; 
-  border-radius: 10px;
- 
+  width:100%;
+  margin-top:45px ; 
+  margin-bottom:45px ; 
+  border-radius:5px ; 
+
   }
   .iterationimg_all{
-    width: 80% ; 
-   
-    margin: auto;   text-align: center;
+ width:85%;
+ margin:auto ; 
+
   }
+  .iteration2_0{
+    font-weight: bold;
+    padding : 25px ; 
+   
+  }
+
   .iterationimg_all p {
-    text-align: justify;
+   margin-bottom:100px;  
+   color:rgba(0,0,0,0.6); 
   }
   .iterationimg_all p, .iterationimg_all h1 {
-  padding: 15px;
+ 
   }
+  .iterationimg_all h1 {
+ border-bottom:8px solid black ; 
+ font-size:4em ; 
+
+}
 
 
 
   @media screen and (max-width: 1200px) {
     .iterationimg_all{
-    width: 90% ; 
-   
+  
+      width:95%;
+ margin:auto ; 
    
   }
 }
@@ -407,25 +422,19 @@ echo "</div> ";
 
 
 h1{
-  font-family: "CaviarDreams_Bold";
+  
   
 
 
 }
 body{
-  font-family: "CaviarDreams";
-
-background-color: #e5e5dc;
+  
 }
 .iterationimg_all_0{
-  background-color: white;
-  width: 90%;
-  margin: auto;
-  border-radius:15px ;
+ 
 }
 .src_img_1{
-  width:100%; 
-  border:20px solid black ; 
+ 
 }
 </style>
 
@@ -433,7 +442,7 @@ background-color: #e5e5dc;
 
 
 <a href="../index.php">
-  <img width="50" height="50" src="https://img.icons8.com/cotton/50/home--v3.png" alt="home--v3"/>
+<img width="100" height="100" src="https://img.icons8.com/ios/100/home--v1.png" alt="home--v1" class="home"/>
 </a>
 
 <?php
@@ -456,3 +465,12 @@ else{
 
 }
 ?>
+
+<style>
+  .home{
+    margin:100px; 
+  }
+  p{
+    text-align:justify ; 
+  }
+</style>
