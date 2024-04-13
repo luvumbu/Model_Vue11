@@ -30,7 +30,8 @@
     'liste_projet_admin_name_tittle3',
     'liste_projet_admin_name_tittle4',
     'liste_projet_admin_new_file',
-    'liste_projet_reg_date'
+    'liste_projet_reg_date',
+    'liste_projet_admin_visibilite1'
 
   );
 
@@ -105,6 +106,14 @@
 
   $number_iteration_1++;
   $liste_projet_reg_date_iteration_1 = $apple_iteration_1->add_array_element($number_iteration_1);
+
+
+  $number_iteration_1++;
+  $liste_projet_admin_visibilite1 = $apple_iteration_1->add_array_element($number_iteration_1);
+ 
+
+ if($liste_projet_admin_visibilite1[0]==""){
+  
 
   
 
@@ -314,26 +323,31 @@ echo "</div> ";
 </body>
 </html>
 <style>
-
- 
   .iterationimg_all img {
-   
+   max-width: 80%;
+ 
+  margin-top:100px; 
+  margin-bottom:100px; 
+  border-radius: 10px;
+ 
   }
   .iterationimg_all{
- 
+    width: 80% ; 
+   
+    margin: auto;   text-align: center;
   }
   .iterationimg_all p {
- 
+    text-align: justify;
   }
   .iterationimg_all p, .iterationimg_all h1 {
- 
+  padding: 15px;
   }
 
 
 
   @media screen and (max-width: 1200px) {
     .iterationimg_all{
-     
+    width: 90% ; 
    
    
   }
@@ -356,41 +370,25 @@ echo "</div> ";
 
 
 h1{
-   
+  font-family: "CaviarDreams_Bold";
   
 
 
 }
 body{
- 
+  font-family: "CaviarDreams";
 
- 
+background-color: #e5e5dc;
 }
 .iterationimg_all_0{
- 
+  background-color: white;
+  width: 90%;
+  margin: auto;
+  border-radius:15px ;
 }
 .src_img_1{
- 
-}
-
- 
-
-
-
-@font-face {
-  font-family: "asciid.[fontvir.us]";
-  src: url("../src/font/asciid.[fontvir.us].ttf");
-}
-
-.iterationimg_all_0{
- 
-  text-align:center ; 
-  margin-top:50px; 
-  padding:15px; 
-  font-family: "asciid.[fontvir.us]";
-
-
-
+  width:100%; 
+  border:20px solid black ; 
 }
 </style>
 
@@ -412,12 +410,12 @@ else{
 
 <style>
   img{
-
- 
     width: 50%; 
     margin:auto ;  
   }
 </style>
   <?php
+}
+
 }
 ?>
