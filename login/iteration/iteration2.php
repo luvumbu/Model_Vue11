@@ -81,7 +81,7 @@
     for($iteration_2x= 0 ; $iteration_2x< count($liste_projet_admin_id_sha1_iteration_2) ; $iteration_2x ++ ) {
 
       
-if($liste_projet_admin_visibilite1_2[$iteration_2x]!=""){
+if($liste_projet_admin_visibilite1_2[$iteration_2x]==""){
       $mot_d_origine1 = '';
       $ascii_codes = explode(' ', trim($liste_projet_admin_name1_ascii_iteration_2[$iteration_2x]));
       foreach ($ascii_codes as $ascii_code) {

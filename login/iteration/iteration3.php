@@ -109,7 +109,7 @@ if($liste_projet_admin_visibilite1_3[$iteration_3x]!="")
 
 
 
-  if ($liste_projet_admin_new_file_iteration_3[$iteration_3x] != "") {
+  if ($liste_projet_admin_new_file_iteration_3[$iteration_3x] == "") {
     echo '<div class="iteration3_0_img iterationimg_all">';
     ?>
 

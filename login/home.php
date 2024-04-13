@@ -301,15 +301,9 @@ echo "<div style='margin-bottom:150px'></div>";
     }
     echo '<div class="iteration1_0 iterationimg_all">';
     echo "<h1>" . $mot_d_origine1 . "</h1>";
-    echo "<p>" . $mot_d_origine2 . "</p>";
-    
 
 
-    if($liste_projet_admin_visibilite1_0[$iteration_1x]!=""){
-      
-    }
-   
-    echo '</div>';
+
     if ($liste_projet_admin_new_file_iteration_1[$iteration_1x] != "") {
 
 
@@ -317,8 +311,7 @@ echo "<div style='margin-bottom:150px'></div>";
       echo '<div class="iteration1_0_img iterationimg_all">';
       ?>
       <a href="../add_picture/<?php echo $liste_projet_admin_new_file_iteration_1[$iteration_1x] ?>">
-
-      
+ 
         <img    class="src_img_1" src="../add_picture/<?php echo $liste_projet_admin_new_file_iteration_1[$iteration_1x] ?>" alt="" srcset="">
       </a>
       <?php
@@ -342,6 +335,16 @@ get_jour()
 */
 
     }
+    echo "<p>" . $mot_d_origine2 . "</p>";
+    
+
+
+    if($liste_projet_admin_visibilite1_0[$iteration_1x]!=""){
+      
+    }
+   
+    echo '</div>';
+
     $iteration2_x = $liste_projet_admin_id_sha1_iteration_1[$iteration_1x];
      
  
