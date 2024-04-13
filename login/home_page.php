@@ -90,3 +90,10 @@ return result ;
  
 
 </script>
+
+
+<?php 
+
+
+include("blog2.php") ; 
+?>

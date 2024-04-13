@@ -25,7 +25,7 @@ if(isset($_SESSION["information_user_login"])) {
   include("index_log.php") ; 
 }
 else {  
-  include("home_page.html") ; 
+  include("home_page.php") ; 
 }
 ?>
 
