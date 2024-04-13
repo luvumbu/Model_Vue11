@@ -24,7 +24,8 @@ array_push(
   'liste_projet_admin_name_tittle2_ascii',
   'liste_projet_admin_name_tittle3',
   'liste_projet_admin_name_tittle4',
-  'liste_projet_admin_new_file'
+  'liste_projet_admin_new_file',
+  'liste_projet_admin_visibilite1'
 );
 
 $apple_iteration_3->sql = 'SELECT * FROM `liste_projet_admin` WHERE `liste_projet_admin_id_sha1_general`!="remove" AND `liste_projet_admin_id_parent` ="' . $iteration3_x . '" ';
@@ -71,14 +72,16 @@ $liste_projet_admin_name_tittle4_iteration_3 = $apple_iteration_3->add_array_ele
 $number_iteration_3++;
 $liste_projet_admin_new_file_iteration_3 = $apple_iteration_3->add_array_element($number_iteration_3);
 
-
-
-
-
+$number_iteration_3++;
+$liste_projet_admin_visibilite1_3 = $apple_iteration_3->add_array_element($number_iteration_3);
 
 
 for ($iteration_3x = 0; $iteration_3x < count($liste_projet_admin_id_sha1_iteration_3); $iteration_3x++) {
 
+
+
+if($liste_projet_admin_visibilite1_3[$iteration_3x]!="")
+{
 
   $mot_d_origine1 = '';
   $ascii_codes = explode(' ', trim($liste_projet_admin_name1_ascii_iteration_3[$iteration_3x]));
@@ -125,7 +128,7 @@ for ($iteration_3x = 0; $iteration_3x < count($liste_projet_admin_id_sha1_iterat
 
   include ("iteration/iteration3.php");
 
-
+}
 }
 
 

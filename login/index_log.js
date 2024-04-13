@@ -57,22 +57,7 @@ const image_2 ="https://img.icons8.com/windows/60/invisible.png" ;
 
 
     function info_1_(){
-      const key = document.getElementById("liste_projet_admin_show").innerHTML ; 
-
-      switch (key) {
-        case "":
-          
-          break;
-          case "":
-          
-          break;
-          case "":
-          
-          break;
-      
-        default:
-          break;
-      }
+ 
        
     }
   }
@@ -188,13 +173,13 @@ const image_2 ="https://img.icons8.com/windows/60/invisible.png" ;
    if(_this.className=="(0-0)"){
      _this.className="" ; 
      _this.src=image_2 ; 
-     document.getElementById(_this.title+"_info_visibilite").innerHTML="rendre <b class='color_b_2'>invisible</b>" ; 
+     document.getElementById(_this.title+"_info_visibilite").innerHTML="<b class='color_b_2'>invisible</b>" ; 
 
    }
    else {
     _this.src=image_1 ; 
     _this.className="(0-0)" ; 
-    document.getElementById(_this.title+"_info_visibilite").innerHTML="rendre <b class='color_b_1'>visible</b>" ; 
+    document.getElementById(_this.title+"_info_visibilite").innerHTML="<b class='color_b_1'>visible</b>" ; 
 
 
    }

@@ -114,7 +114,7 @@
 
  if($liste_projet_admin_visibilite1[0]==""){
   
-
+ 
   
 
 ?>
@@ -159,7 +159,8 @@
     'liste_projet_admin_name_tittle2_ascii',
     'liste_projet_admin_name_tittle3',
     'liste_projet_admin_name_tittle4',
-    'liste_projet_admin_new_file'
+    'liste_projet_admin_new_file',
+    'liste_projet_admin_visibilite1'
 
   );
 
@@ -223,6 +224,15 @@
   $number_iteration_0++;
   $liste_projet_admin_new_file_iteration_0 = $apple_iteration_0->add_array_element($number_iteration_0);
 
+  $number_iteration_0++;
+
+  $liste_projet_admin_visibilite1_0 = $apple_iteration_0->add_array_element($number_iteration_0);
+
+
+
+
+  
+
 
 ?>
 
@@ -265,11 +275,20 @@ echo ' </li>';
 </nav>
 <?php
 
+ 
+
+ 
   //  partie pour le menu 
 //var_dump($liste_projet_admin_name1_iteration_0); 
 echo "<div class='iterationimg_all_0'> ";
 echo "<div style='margin-bottom:150px'></div>";
   for ($iteration_1x = 0; $iteration_1x < count($liste_projet_admin_id_sha1_iteration_1); $iteration_1x++) {
+
+
+
+  
+
+  
     $mot_d_origine1 = '';
     $ascii_codes = explode(' ', trim($liste_projet_admin_name1_ascii_iteration_1[$iteration_1x]));
     foreach ($ascii_codes as $ascii_code) {
@@ -283,9 +302,18 @@ echo "<div style='margin-bottom:150px'></div>";
     echo '<div class="iteration1_0 iterationimg_all">';
     echo "<h1>" . $mot_d_origine1 . "</h1>";
     echo "<p>" . $mot_d_origine2 . "</p>";
+    
+
+
+    if($liste_projet_admin_visibilite1_0[$iteration_1x]!=""){
+      
+    }
    
     echo '</div>';
     if ($liste_projet_admin_new_file_iteration_1[$iteration_1x] != "") {
+
+
+   
       echo '<div class="iteration1_0_img iterationimg_all">';
       ?>
       <a href="../add_picture/<?php echo $liste_projet_admin_new_file_iteration_1[$iteration_1x] ?>">
@@ -315,6 +343,8 @@ get_jour()
 
     }
     $iteration2_x = $liste_projet_admin_id_sha1_iteration_1[$iteration_1x];
+     
+ 
     include ("iteration/iteration2.php");
   }
 echo "</div> ";
