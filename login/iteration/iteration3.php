@@ -80,7 +80,7 @@ for ($iteration_3x = 0; $iteration_3x < count($liste_projet_admin_id_sha1_iterat
 
 
 
-if($liste_projet_admin_visibilite1_3[$iteration_3x]!="")
+if($liste_projet_admin_visibilite1_3[$iteration_3x]=="")
 {
 
   $mot_d_origine1 = '';
@@ -109,7 +109,7 @@ if($liste_projet_admin_visibilite1_3[$iteration_3x]!="")
 
 
 
-  if ($liste_projet_admin_new_file_iteration_3[$iteration_3x] == "") {
+  if ($liste_projet_admin_new_file_iteration_3[$iteration_3x] != "") {
     echo '<div class="iteration3_0_img iterationimg_all">';
     ?>
 
@@ -126,7 +126,7 @@ if($liste_projet_admin_visibilite1_3[$iteration_3x]!="")
 
   $iteration3_x = $liste_projet_admin_id_sha1_iteration_3[$iteration_3x];
 
-  include ("iteration/iteration3.php");
+ include ("iteration/iteration4.php");
 
 }
 }

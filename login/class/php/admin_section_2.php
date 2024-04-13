@@ -1,4 +1,6 @@
 <?php 
+
+
 include ("path_class.php");
 $liste_projet_admin_id_parent =         $_SESSION["liste_projet_admin_id_parent"];
 $liste_projet_admin_id_parent_session = $_SESSION["liste_projet_admin_id_parent"];
@@ -29,7 +31,9 @@ $apple->execution();
 $myJSON = json_encode($apple->list_row);
 // affectation valeur array 
 // execution et ajout des element dans la nouvelle table 
-include ("liste_projet_admin.php");
+
+
+include ("liste_projet_admin.php"); 
 include ("admin_section_form.php");
  
 
