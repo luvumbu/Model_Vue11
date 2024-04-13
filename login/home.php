@@ -244,7 +244,7 @@
     </button>
     <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+       <!-- <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5> -->
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
@@ -256,9 +256,16 @@
  
 for($x=0;$x<count($liste_projet_admin_name1_iteration_0);$x++){
 
+
+  if($liste_projet_admin_visibilite1_0[$x]==""){
+ 
+
 echo '<li class="nav-item">';
 echo '<a class="nav-link active" aria-current="page" href="#'.$liste_projet_admin_id_sha1_iteration_0[$x].'">'.$liste_projet_admin_name1_iteration_0[$x].'</a>';
 echo ' </li>';
+ 
+  }
+
  
 
 }
