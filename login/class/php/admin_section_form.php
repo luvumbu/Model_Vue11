@@ -70,7 +70,7 @@ for ($o = 0; $o < count($liste_projet_admin_id); $o++) {
 
         ?>
           <li class="list-group-item d-flex justify-content-between align-items-start">
-    <div class="ms-2 me-auto">
+    <div class="ms-2 me-auto padding_bottom_x1">
         <a href="add_picture/<?php echo $liste_projet_admin_new_file[$o] ?>">
           <img class="max_width_img" src="add_picture/<?php echo $liste_projet_admin_new_file[$o] ?>" alt="" srcset="">
 
@@ -100,7 +100,7 @@ if( $liste_projet_admin_visibilite1[$o]==""){
      </div>
      <p>
   <div id="<?php echo  $liste_projet_admin_id_sha1[$o]."_info_visibilite" ?>">
-         <b class="color_b_1"> visible</b> 
+         <b class="color_b_1 alert alert-success"> visible</b> 
   </div>
 </p>
 
@@ -114,7 +114,7 @@ else {
   </div>
 
   <div id="<?php echo  $liste_projet_admin_id_sha1[$o]."_info_visibilite" ?>">
-          <b class="color_b_2">invisible</b>
+          <b class="color_b_2 alert alert-danger">invisible</b>
   </div>
   <?php 
 }
@@ -228,8 +228,14 @@ else {
   }
   .color_b_1{
     color:green ; 
+
   }
   .color_b_2{
     color:red ; 
+
+
+  }
+  .padding_bottom_x1{
+    padding-bottom:100px ; 
   }
 </style>
