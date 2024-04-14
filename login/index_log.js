@@ -202,11 +202,26 @@ const image_2 ="https://img.icons8.com/windows/60/invisible.png" ;
   function change_name(){
     Ajax("admin_section_1", "class/php/admin_section_3.php");
 
+
+
+   
+
+    const myTimeout = setTimeout(myGreeting, 250);
+
+function myGreeting() {
+  Ajax("social_user", "class/php/social_user.php");
+
+}
+
   }
   function information_user() {
 
+
+
     const liste_projet_admin_name1 = document.getElementById("liste_projet_admin_name1").value ; 
     const liste_projet_admin_name2 = document.getElementById("liste_projet_admin_name2").value ; 
+
+ 
   
 
 
@@ -218,7 +233,8 @@ const image_2 ="https://img.icons8.com/windows/60/invisible.png" ;
 
     const ok = new Information("class/php/update/information_user.php"); // création de la classe 
     ok.add("liste_projet_admin_name1", liste_projet_admin_name1); // ajout d'une deuxieme information denvoi  
-    ok.add("liste_projet_admin_name2", liste_projet_admin_name2); // ajout d'une deuxieme information denvoi    
+    ok.add("liste_projet_admin_name2", liste_projet_admin_name2); // ajout d'une deuxieme information denvoi   
+ 
 
    
 
@@ -233,3 +249,79 @@ const image_2 ="https://img.icons8.com/windows/60/invisible.png" ;
 
 
   }
+
+
+function social_user(_this) {
+ 
+ 
+  const ok = new Information("class/php/add_admin2.php"); // création de la classe 
+  ok.add("social_user_id_information_user", _this.title); // ajout d'une deuxieme information denvoi  
+  console.log(ok.info()); // demande l'information dans le tableau
+  ok.push(); // envoie l'information au code pkp 
+
+
+ 
+
+
+  const myTimeout = setTimeout(myGreeting, 250);
+
+  function myGreeting() {
+    Ajax("social_user", "class/php/social_user.php");
+ 
+
+  
+  }
+
+
+}
+
+
+function social_user_id_key_up(_this) {
+  
+
+
+  const ok = new Information("class/php/update/social_user_id_key_up.php"); // création de la classe 
+  ok.add("social_user_id_sha1", _this.title); // ajout d'une deuxieme information denvoi  
+  ok.add("liste_projet_admin_name1", _this.value); // ajout d'une deuxieme information denvoi  
+
+  
+
+
+ 
+
+
+  
+
+  console.log(ok.info()); // demande l'information dans le tableau
+  ok.push(); // envoie l'information au code pkp 
+
+}
+
+function social_user_remove (_this){
+
+  
+  
+  const ok = new Information("class/php/update/social_user_remove.php"); // création de la classe 
+  ok.add("social_user_id_sha1", _this.title); // ajout d'une deuxieme information denvoi  
+
+
+  console.log(ok.info()); // demande l'information dans le tableau
+  ok.push(); // envoie l'information au code pkp 
+
+
+
+
+
+
+  const myTimeout = setTimeout(myGreeting, 250);
+
+  function myGreeting() {
+    Ajax("social_user", "class/php/social_user.php");
+ 
+
+  
+  }
+
+
+ 
+}

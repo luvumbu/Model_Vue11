@@ -102,16 +102,29 @@ function add_picture() {
   window.location.replace("add_picture/index.php");
 }
 
-
-     
-
+  }
 
 
 
 
+  function add_picturex(_this){
+ 
+
+
+    const ok = new Information("class/php/cookie/add_picturex.php"); // création de la classe 
+ 
+      
+   
+     ok.add("add_picture", _this.title); // ajout d'une deuxieme information denvoi  
+     console.log(ok.info()); // demande l'information dans le tableau
+     ok.push(); // envoie l'information au code pkp 
 
 
 
+     const myTimeout = setTimeout(add_picture, 250);
 
+          function add_picture() {
+            window.location.replace("add_picture/index.php");
+          }
 
   }

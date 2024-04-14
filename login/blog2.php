@@ -57,7 +57,9 @@ for($a= 0; $a<count($liste_projet_admin_id_sha1) ; $a ++) {
   <h1><?php echo  $liste_projet_admin_name1[$a] ?> </h1>
   <p><?php echo  $liste_projet_admin_name1[$a] ?></p>
   <br/>
+  <a href="<?php echo "home.php/".$liste_projet_admin_id_sha1[$a] ?>">
 <img src="<?php echo "add_picture/".$liste_projet_admin_new_file[$a] ?>" alt="">
+</a>
 <br/>
 
 <a href="<?php echo "home.php/".$liste_projet_admin_id_sha1[$a] ?>">

@@ -85,12 +85,19 @@ $execution_formulaire_php->set_action("CREATE TABLE information_user (
 $execution_formulaire_php->set_action("CREATE TABLE social_user (
   social_user_id	 INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   social_user_id_sha1 VARCHAR(200) NOT NULL,
+  social_user_id_sha1_general VARCHAR(200) NOT NULL,
+  social_user_id_information_user VARCHAR(200) NOT NULL,
+
   social_user_ip VARCHAR(200) NOT NULL,
-  social_user_name_1 VARCHAR(200) NOT NULL,
-  social_user_name_2 VARCHAR(200) NOT NULL,
-  social_user_name_3 VARCHAR(200) NOT NULL,
-  social_user_name_4 VARCHAR(200) NOT NULL,
-  social_img VARCHAR(200) NOT NULL, 
+  social_user_information_user_id_sha1 TEXT(2000) NOT NULL,
+  social_user_name_1 TEXT(2000) NOT NULL,
+  social_user_name_2 TEXT(2000) NOT NULL,
+  social_user_name_3 TEXT(2000) NOT NULL,
+  social_user_name_4 TEXT(2000) NOT NULL,
+  social_img_1 TEXT(2000) NOT NULL, 
+  social_img_2 TEXT(2000) NOT NULL, 
+  social_img_3 TEXT(2000) NOT NULL, 
+  social_img_4 TEXT(2000) NOT NULL, 
   social_user_reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
   )");
 
@@ -373,6 +380,16 @@ $execution_formulaire_php->set_action("CREATE TABLE liste_log3 (
   information_user_id_sha1 TEXT(2000) NOT NULL,    
   liste_reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
   )");
+
+
+
+
+ 
+
+ 
+
+
+
 
 
  

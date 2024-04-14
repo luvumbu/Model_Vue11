@@ -50,6 +50,7 @@ if(count($apple->list_row)>0){
   $_SESSION["information_user_id_sha1"] = sha1($information_user_login)  ;
   $_SESSION["information_user_id_sha1x"] =  $information_user_login  ;
   $_SESSION["information_user_id"]= $apple->list_row[0] ; 
+  $_SESSION["social_user_id_information_user"]= $apple->list_row[1] ; 
 
   
 }

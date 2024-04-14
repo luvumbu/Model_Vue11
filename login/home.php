@@ -442,7 +442,7 @@ body{
 
 
 <a href="../index.php">
-<img width="100" height="100" src="https://img.icons8.com/ios/100/home--v1.png" alt="home--v1" class="home"/>
+<img width="60" height="60" src="https://img.icons8.com/ios/60/home--v1.png" alt="home--v1" class="home"/>
 </a>
 
 <?php

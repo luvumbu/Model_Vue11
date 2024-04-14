@@ -19,6 +19,9 @@ $image_src_6 = "https://img.icons8.com/officel/50/add--v1.png";
 $image_src_7 = "https://img.icons8.com/cotton/64/name--v2.png";
 
 
+$image_src_8="https://img.icons8.com/cotton/64/artificial-intelligence.png";
+
+
  
  
 $text_src_2 = "Home";
@@ -28,6 +31,9 @@ $text_src_5 = "Home";
 
 $text_src_6 = "Parametres";
 $text_src_7 = "Changer votre nom";
+
+$text_src_8 = "ajouter media";
+
 
 
 
@@ -79,9 +85,9 @@ $text_src_7 = "Changer votre nom";
     echo '<img class="' . $img_class_all . '" width="' . $image_width_all . '" height="' . $image_height_all . '" src="' . $image_src_7 . '" alt="crown"/>';
       
       ?>
-
-
     </div>
+
+
     
     <?php
     if ($root_user) {

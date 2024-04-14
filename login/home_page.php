@@ -97,3 +97,4 @@ return result ;
 
 include("blog2.php") ; 
 ?>
+ 
