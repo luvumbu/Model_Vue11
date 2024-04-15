@@ -199,7 +199,7 @@ const image_2 ="https://img.icons8.com/windows/60/invisible.png" ;
   }
 
 
-  function change_name(){
+  function change_name(_this){
     Ajax("admin_section_1", "class/php/admin_section_3.php");
 
 
@@ -277,12 +277,20 @@ function social_user(_this) {
 
 
 function social_user_id_key_up(_this) {
+
+const liste_projet_admin_name1 = document.getElementById(_this.title+"_1").value ; 
+const liste_projet_admin_name3 = document.getElementById(_this.title+"_2").value ; 
+
+
+  console.log(liste_projet_admin_name1) ; 
   
-
-
   const ok = new Information("class/php/update/social_user_id_key_up.php"); // création de la classe 
+
+
   ok.add("social_user_id_sha1", _this.title); // ajout d'une deuxieme information denvoi  
-  ok.add("liste_projet_admin_name1", _this.value); // ajout d'une deuxieme information denvoi  
+
+  ok.add("liste_projet_admin_name1", liste_projet_admin_name1); // ajout d'une deuxieme information denvoi  
+  ok.add("liste_projet_admin_name3", liste_projet_admin_name3); // ajout d'une deuxieme information denvoi  
 
   
 
@@ -294,6 +302,7 @@ function social_user_id_key_up(_this) {
 
   console.log(ok.info()); // demande l'information dans le tableau
   ok.push(); // envoie l'information au code pkp 
+ 
 
 }
 

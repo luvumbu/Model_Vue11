@@ -11,6 +11,7 @@ array_push(
   $apple_iteration_1->row,
   'social_user_name_1',
   'social_user_name_2',
+  'social_user_name_3',
   'social_user_reg_date'
 
 );
@@ -39,6 +40,9 @@ $number_iteration_0++;
 $social_user_id_information_user_social_user_name_3 = $apple_iteration_1->add_array_element($number_iteration_0);
 $number_iteration_0++;
 
+$social_user_id_information_user_social_user_name_4 = $apple_iteration_1->add_array_element($number_iteration_0);
+$number_iteration_0++;
+
  
 
 
@@ -52,7 +56,11 @@ for($a = 0 ; $a <count($social_user_id_information_user_social_user_name_1) ; $a
 ?>
 <div class="social">
 
+
+<a href="<?php echo $social_user_id_information_user_social_user_name_3[$a] ?> ">
   <img style="width:100px" src="<?php echo "../add_picture/".$social_user_id_information_user_social_user_name_2[$a] ; ?> " alt="" srcset="">
+</a>
+  
 
   <p>
     <?php 
@@ -77,10 +85,16 @@ echo "</div>" ;
     margin:auto ; 
     text-align:center ; 
   }
+  .social img:hover{
+    cursor:pointer ; 
+
+  }
   .social p {
     text-align:center ; 
  font-family : bold ; 
     padding:5px; 
+
+    
 
   }
 </style>

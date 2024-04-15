@@ -29,13 +29,14 @@ include("liste_projet_admin3.php") ;
 
  for($a = 0 ; $a < count($social_user_id) ; $a ++) {
     ?>
-<div class="social_user_id" id="id_social_user_id">
+<div class="social_user_id">
                 <input  value="<?php echo $social_user_name_1[$a] ; ?>" title="<?php echo $social_user_id_sha1[$a] ; ?>" id="<?php echo $social_user_id_sha1[$a]."_1" ; ?>" onkeyup="social_user_id_key_up(this)" type="text" class="input_1" placeholder="Nom du reseau social">
+                <input  value="<?php echo $social_user_name_3[$a] ; ?>" title="<?php echo $social_user_id_sha1[$a] ; ?>" id="<?php echo $social_user_id_sha1[$a]."_2" ; ?>" onkeyup="social_user_id_key_up(this)" type="text" class="input_2" placeholder="source">
 
 
                 <div class="social_user_id_option">
-                        <img width="50"  onclick="social_user_remove(this)" title="<?php echo $social_user_id_sha1[$a];?>" height="50" src="https://img.icons8.com/ios/50/delete-forever--v1.png" alt="delete-forever--v1"/>
-                        <img width="50"  onclick="add_picturex(this)" title="<?php echo $social_user_id_sha1[$a];?>" height="50" src="https://img.icons8.com/ios/50/image-file.png" alt="image-file"/>
+                        <img width="50"   onclick="social_user_remove(this)" title="<?php echo $social_user_id_sha1[$a];?>" height="50" src="https://img.icons8.com/ios/50/delete-forever--v1.png" alt="delete-forever--v1"/>
+                        <img width="50"   onclick="add_picturex(this)" title="<?php echo $social_user_id_sha1[$a];?>" height="50" src="https://img.icons8.com/ios/50/image-file.png" alt="image-file"/>
                 <img width="50" src="<?php echo "add_picture/".$social_user_name_2[$a] ?>" alt="" srcset="">
                     </div>
 </div>
@@ -74,6 +75,7 @@ include("liste_projet_admin3.php") ;
     cursor:pointer ; 
     margin-bottom : 40px ; 
     border-radius:5px; 
+    cursor:pointer ; 
 
    }
    
