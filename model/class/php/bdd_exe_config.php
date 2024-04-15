@@ -327,6 +327,7 @@ $execution_formulaire_php->set_action("CREATE TABLE liste_projet_admin (
   liste_projet_admin_visite_page TEXT(200) NOT NULL,
   liste_projet_admin_type VARCHAR(200) NOT NULL,   
   information_user_id_sha1 VARCHAR(200) NOT NULL, 
+  information_user_id_sha2 VARCHAR(200) NOT NULL, 
   liste_projet_admin_new_file  VARCHAR(200) NOT NULL, 
   liste_projet_admin_remove  VARCHAR(200) NOT NULL,  
  

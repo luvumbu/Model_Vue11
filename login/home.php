@@ -1,3 +1,6 @@
+<?php 
+    session_start() ; 
+?>
 <!DOCTYPE html>
 <html lang="fr">
   <?php
@@ -31,7 +34,8 @@
     'liste_projet_admin_name_tittle4',
     'liste_projet_admin_new_file',
     'liste_projet_reg_date',
-    'liste_projet_admin_visibilite1'
+    'liste_projet_admin_visibilite1',
+    'information_user_id_sha2'
 
   );
 
@@ -41,6 +45,7 @@
 
 
 
+  
 
 
 
@@ -283,7 +288,6 @@ echo ' </li>';
 <?php
 
  
-
  
   //  partie pour le menu 
 //var_dump($liste_projet_admin_name1_iteration_0); 
@@ -354,9 +358,12 @@ get_jour()
     echo "<p>" . $mot_d_origine2 . "</p>";
     $iteration2_x = $liste_projet_admin_id_sha1_iteration_1[$iteration_1x];
      
- 
+
     include ("iteration/iteration2.php");
+    
   }
+
+
 echo "</div> ";
   ?>
 
@@ -368,10 +375,11 @@ echo "</div> ";
   margin-top:45px ; 
   margin-bottom:45px ; 
   border-radius:5px ; 
+  margin:auto ; 
 
   }
   .iterationimg_all{
- width:85%;
+ width:80%;
  margin:auto ; 
 
   }
@@ -390,7 +398,7 @@ echo "</div> ";
   }
   .iterationimg_all h1 {
  border-bottom:8px solid black ; 
- font-size:4em ; 
+ font-size:2.5em ; 
 
 }
 
@@ -465,7 +473,10 @@ else{
 
 }
 ?>
+<?php 
 
+include("social_src.php") ;
+?>
 <style>
   .home{
     margin:100px; 
@@ -474,3 +485,4 @@ else{
     text-align:justify ; 
   }
 </style>
+

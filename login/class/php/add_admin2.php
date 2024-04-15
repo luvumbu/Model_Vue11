@@ -1,6 +1,4 @@
 <?php 
-
-
 include("path_class.php") ; 
 $t = time() ;
 
