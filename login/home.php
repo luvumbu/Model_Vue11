@@ -437,7 +437,7 @@ echo "</div> ";
 <style>
 
   .just_img{
-    background-color: red;
+  
     width: 60%;
     margin: auto;
   }
