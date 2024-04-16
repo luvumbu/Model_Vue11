@@ -205,7 +205,9 @@ if($liste_projet_admin_visibilite1_iteration_4[$iteration_4x]==""){
         echo '<div class="iteration2_0_img iterationimg_all">';      
           ?>
     <a href="../add_picture/<?php echo $liste_projet_admin_new_file_iteration_4[$iteration_4x]?>">
+    <div class="just_img">
     <img src="../add_picture/<?php echo $liste_projet_admin_new_file_iteration_4[$iteration_4x]?>" alt="" srcset="">
+    </div>
     </a>
           <?php
         echo '</div>';

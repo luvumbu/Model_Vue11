@@ -44,8 +44,49 @@
 
 
 
-
+$nombre = count($apple_iteration_1->row);
   
+$information_user_id_sha2_user = $apple_iteration_1->list_row[count($apple_iteration_1->row)-1];
+
+
+
+
+
+
+
+
+
+
+$apple_iteration_00 = new Select_datas($servername, $username, $password, $dbname);
+array_push(
+  $apple_iteration_00->row,
+  'information_user_name_1',
+  'information_user_name_2'
+
+);
+
+$apple_iteration_00->sql = 'SELECT * FROM `information_user` WHERE `information_user_id_sha1` ="'.$information_user_id_sha2_user.'"';
+$apple_iteration_00->execution();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -328,9 +369,31 @@ echo "/" ;
 echo $apple__->get_anne();
 echo " ".$apple__->get_heure_complet() ; 
 
+
+
+
+
+echo '<div class="iteration2_0_x">' ; 
+
+
+echo "@".$apple_iteration_00->list_row[0]." ";
+
+echo $apple_iteration_00->list_row[1];
+echo '</div>' ;
+
 echo '</div>' ; 
      
+
+
+
     echo '</div>';
+
+
+ 
+
+
+
+
     if ($liste_projet_admin_new_file_iteration_1[$iteration_1x] != "") {
 
 
@@ -339,8 +402,10 @@ echo '</div>' ;
       ?>
       <a href="../add_picture/<?php echo $liste_projet_admin_new_file_iteration_1[$iteration_1x] ?>">
 
-      
-        <img    class="src_img_1" src="../add_picture/<?php echo $liste_projet_admin_new_file_iteration_1[$iteration_1x] ?>" alt="" srcset="">
+      <div class="just_img">
+         <img    class="src_img_1" src="../add_picture/<?php echo $liste_projet_admin_new_file_iteration_1[$iteration_1x] ?>" alt="" srcset="">
+      </div>
+       
       </a>
       <?php
 
@@ -370,12 +435,19 @@ echo "</div> ";
 </body>
 </html>
 <style>
+
+  .just_img{
+    background-color: red;
+    width: 60%;
+    margin: auto;
+  }
   .iterationimg_all img {
   width:100%;
   margin-top:45px ; 
   margin-bottom:45px ; 
   border-radius:5px ; 
   margin:auto ; 
+  text-align: center;
 
   }
   .iterationimg_all{
@@ -392,6 +464,7 @@ echo "</div> ";
   .iterationimg_all p {
    margin-bottom:100px;  
    color:rgba(0,0,0,0.6); 
+   margin-top:100px;
   }
   .iterationimg_all p, .iterationimg_all h1 {
  
@@ -400,6 +473,11 @@ echo "</div> ";
  border-bottom:8px solid black ; 
  font-size:2.5em ; 
 
+}
+
+
+.iteration2_0_x{
+  color: rgba(0,0,0,0.3);
 }
 
 
@@ -442,7 +520,8 @@ body{
  
 }
 .src_img_1{
- 
+ width: 60%;
+ margin: auto;
 }
 </style>
 
@@ -474,6 +553,10 @@ else{
 }
 ?>
 <?php 
+
+
+
+
 
 include("social_src.php") ;
 ?>

@@ -53,6 +53,11 @@ $number_iteration_0++;
 
 echo "<div class='all_social'>" ; 
 for($a = 0 ; $a <count($social_user_id_information_user_social_user_name_1) ; $a ++) {
+
+
+  if($social_user_id_information_user_social_user_name_1[$a]!="remove"){
+
+  
 ?>
 <div class="social">
 
@@ -72,6 +77,7 @@ for($a = 0 ; $a <count($social_user_id_information_user_social_user_name_1) ; $a
 
 <?php 
 }
+}
 echo "</div>" ; 
 ?>
 
@@ -84,9 +90,15 @@ echo "</div>" ;
     width:90%; 
     margin:auto ; 
     text-align:center ; 
+    flex-wrap: wrap;
   }
   .social img:hover{
     cursor:pointer ; 
+
+  }
+  .social img{
+   
+    border-radius:15px;
 
   }
   .social p {

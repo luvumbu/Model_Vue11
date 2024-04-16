@@ -63,7 +63,7 @@ for($a= 0; $a<count($liste_projet_admin_id_sha1) ; $a ++) {
 <br/>
 
 <a href="<?php echo "home.php/".$liste_projet_admin_id_sha1[$a] ?>">
-<div   class="btn btn-primary">Lien du projet</div>
+<div   class="btn btn-primary space">Lien du projet</div>
 </a>
 
 </div>
@@ -78,6 +78,9 @@ for($a= 0; $a<count($liste_projet_admin_id_sha1) ; $a ++) {
  <style>
   .border img {
     max-width:300px; 
+  }
+  .space{
+    margin: 60px;
   }
  </style>
 
