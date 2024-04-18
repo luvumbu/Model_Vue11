@@ -63,7 +63,7 @@ for($a = 0 ; $a <count($social_user_id_information_user_social_user_name_1) ; $a
 
 
 <a href="<?php echo $social_user_id_information_user_social_user_name_3[$a] ?> ">
-  <img style="width:100px" src="<?php echo "../add_picture/".$social_user_id_information_user_social_user_name_2[$a] ; ?> " alt="" srcset="">
+  <img style="width:50px" src="<?php echo "../add_picture/".$social_user_id_information_user_social_user_name_2[$a] ; ?> " alt="" srcset="">
 </a>
   
 
@@ -114,7 +114,9 @@ echo "</div>" ;
  
 
 
-
+<a href="../index.php">
+<img width="60" height="60" src="https://img.icons8.com/ios/60/home--v1.png" alt="home--v1" class="home"/>
+</a>
 
 
  

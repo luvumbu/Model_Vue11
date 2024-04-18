@@ -95,6 +95,6 @@ return result ;
 <?php 
 
 
-include("blog2.php") ; 
+//include("blog2.php") ; 
 ?>
  
